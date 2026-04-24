@@ -30,7 +30,7 @@ export default function FeaturedProducts() {
               marginBottom: 5,
             }}
           >
-            FEATURED
+            WORK
           </div>
           <div
             style={{
@@ -75,21 +75,40 @@ export default function FeaturedProducts() {
               ((e.currentTarget as HTMLElement).style.background = "var(--surface)")
             }
           >
+            {/* Status dot + tag row */}
             <div
               style={{
-                fontFamily: "'DM Mono', monospace",
-                fontSize: 9,
-                letterSpacing: "0.1em",
-                color: "var(--muted)",
-                padding: "3px 8px",
-                border: "1px solid var(--border2)",
-                borderRadius: 2,
-                display: "inline-block",
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
                 marginBottom: 14,
               }}
             >
-              {product.tag}
+              <span
+                style={{
+                  width: 5,
+                  height: 5,
+                  borderRadius: "50%",
+                  background: product.status === "live" ? "var(--color-live)" : "var(--color-progress)",
+                  display: "inline-block",
+                  flexShrink: 0,
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: "'DM Mono', monospace",
+                  fontSize: 9,
+                  letterSpacing: "0.1em",
+                  color: "var(--muted)",
+                  padding: "3px 8px",
+                  border: "1px solid var(--border2)",
+                  borderRadius: 2,
+                }}
+              >
+                {product.tag}
+              </span>
             </div>
+
             <h4
               style={{
                 fontFamily: "'Syne', sans-serif",
@@ -104,10 +123,11 @@ export default function FeaturedProducts() {
             <p
               style={{
                 color: "var(--muted)",
-                fontSize: 12,
+                fontSize: 13,
                 lineHeight: 1.7,
                 marginBottom: 16,
                 fontWeight: 300,
+                maxWidth: "42ch",
               }}
             >
               {product.description}
@@ -122,7 +142,8 @@ export default function FeaturedProducts() {
             >
               {product.url ? "View project →" : "In progress →"}
             </div>
-            {/* Ghost number */}
+
+            {/* Ghost month */}
             <div
               style={{
                 position: "absolute",
@@ -138,7 +159,7 @@ export default function FeaturedProducts() {
                 userSelect: "none",
               }}
             >
-              {String(i + 1).padStart(2, "0")}
+              {product.month.split(" ")[0].toUpperCase()}
             </div>
           </a>
         ))}

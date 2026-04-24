@@ -36,22 +36,16 @@ export default function Nav() {
           letterSpacing: "0.04em",
         }}
       >
-        <li><a href="#projects" style={{ color: "var(--muted)", textDecoration: "none" }}>projects</a></li>
-        <li><a href="#about" style={{ color: "var(--muted)", textDecoration: "none" }}>about</a></li>
         <li>
-          <a
-            href="https://www.linkedin.com/in/andrebarros6/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "var(--muted)", textDecoration: "none" }}
-          >
-            linkedin
-          </a>
+          <a href="#projects" style={{ color: "var(--muted)" }}>projects</a>
+        </li>
+        <li>
+          <a href="#about" style={{ color: "var(--muted)" }}>about</a>
         </li>
       </ul>
 
       <a
-        href="mailto:hello@barrosbuilds.com"
+        href="mailto:andre@barrosbuilds.com"
         style={{
           background: "var(--accent)",
           color: "var(--bg)",
@@ -60,11 +54,11 @@ export default function Nav() {
           fontWeight: 500,
           padding: "7px 16px",
           borderRadius: 3,
-          textDecoration: "none",
           letterSpacing: "0.04em",
+          boxShadow: "var(--shadow-glow)",
         }}
       >
-        hire me →
+        work with me →
       </a>
     </nav>
   );

@@ -8,11 +8,6 @@ const statusLabel: Record<ProductStatus, string> = {
   planned: "PLANNED",
 };
 
-const statusQuarter: Record<number, string> = {};
-products.forEach((p) => {
-  statusQuarter[p.id] = p.quarter;
-});
-
 export default function ProductTracker() {
   return (
     <section
@@ -23,7 +18,6 @@ export default function ProductTracker() {
         borderBottom: "1px solid var(--border)",
       }}
     >
-      {/* Header */}
       <div
         style={{
           display: "flex",
@@ -58,9 +52,41 @@ export default function ProductTracker() {
             10 Products · 2026
           </div>
         </div>
+
+        {/* Legend */}
+        <div
+          style={{
+            display: "flex",
+            gap: 16,
+            fontFamily: "'DM Mono', monospace",
+            fontSize: 9,
+            color: "var(--muted)",
+            letterSpacing: "0.06em",
+            alignItems: "center",
+          }}
+        >
+          {[
+            { color: "var(--color-live)", label: "LIVE" },
+            { color: "var(--color-progress)", label: "IN PROGRESS" },
+            { color: "var(--color-planned)", label: "PLANNED" },
+          ].map(({ color, label }) => (
+            <div key={label} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+              <span
+                style={{
+                  width: 5,
+                  height: 5,
+                  borderRadius: "50%",
+                  background: color,
+                  display: "inline-block",
+                  flexShrink: 0,
+                }}
+              />
+              {label}
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Grid */}
       <div
         style={{
           display: "grid",
@@ -72,15 +98,11 @@ export default function ProductTracker() {
           const isLive = product.status === "live";
           const isProg = product.status === "in_progress";
           const borderColor = isLive
-            ? "var(--accent)"
+            ? "var(--color-live)"
             : isProg
-            ? "var(--accent2)"
-            : "var(--dim)";
-          const dotColor = borderColor;
-          const label =
-            product.status === "planned"
-              ? product.quarter
-              : statusLabel[product.status];
+            ? "var(--color-progress)"
+            : "var(--color-planned)";
+          const label = statusLabel[product.status];
 
           return (
             <a
@@ -114,9 +136,14 @@ export default function ProductTracker() {
                   color: "var(--dim)",
                   marginBottom: 6,
                   letterSpacing: "0.06em",
+                  fontVariantNumeric: "tabular-nums",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
                 }}
               >
-                {String(product.id).padStart(2, "0")}
+                <span>{String(product.id).padStart(2, "0")}</span>
+                <span style={{ color: "var(--muted)" }}>{product.month}</span>
               </div>
               <div
                 style={{
@@ -147,7 +174,7 @@ export default function ProductTracker() {
                     width: 5,
                     height: 5,
                     borderRadius: "50%",
-                    background: dotColor,
+                    background: borderColor,
                     flexShrink: 0,
                     display: "inline-block",
                   }}

@@ -1,19 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --bg:       #1c1a17;
-  --surface:  #242019;
-  --surface2: #2c2820;
-  --surface3: #332e25;
-  --border:   #3d3830;
-  --border2:  #4f4840;
-  --accent:   #c4593a;
-  --accent2:  #d4882b;
-  --accent3:  #7a7a3a;
-  --text:     #e8dcc8;
-  --muted:    #9a8e78;
-  --dim:      #5a5040;
-  --sand:     #c8b08a;
+  /* BarrosBuilds — A+C hybrid: warm dark base, terracotta identity */
+
+  /* Background stack — 4 elevation steps, all warm-shifted */
+  --bg:        #1c1a17;
+  --surface:   #242019;
+  --surface2:  #2c2820;
+  --surface3:  #332e25;
+
+  /* Borders */
+  --border:    #3d3830;
+  --border2:   #4f4840;
+
+  /* Identity color — terracotta. Used on: CTA, live dots, wordmark, active states. Nowhere else. */
+  --accent:    #c4593a;
+  --accent2:   #d4882b;  /* amber — in-progress status only */
+
+  /* Text stack */
+  --text:      #e8dcc8;  /* warm cream — primary */
+  --muted:     #a89880;  /* AA-compliant on --bg (~4.6:1) */
+  --dim:       #5a5040;  /* planned status, ghost numbers */
+  --sand:      #c8b08a;  /* secondary interactive text */
+
+  /* Status semantics — do not use these colors for anything else */
+  --color-live:     #c4593a;
+  --color-progress: #d4882b;
+  --color-planned:  #5a5040;
+
+  /* Shadows — border-only system, one glow exception */
+  --shadow-glow: 0 0 24px rgba(196, 89, 58, 0.12);
 }
 
 * {
@@ -27,4 +43,11 @@ body {
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "rlig" 1, "calt" 1, "tnum" 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

@@ -1,5 +1,6 @@
 import { stats } from "@/lib/products";
 
+
 export default function Hero() {
   return (
     <section
@@ -11,7 +12,7 @@ export default function Hero() {
         borderBottom: "1px solid var(--border)",
       }}
     >
-      {/* Glow */}
+      {/* Subtle terracotta glow — top right */}
       <div
         style={{
           position: "absolute",
@@ -25,6 +26,7 @@ export default function Hero() {
         }}
       />
 
+      {/* Eyebrow */}
       <div
         style={{
           fontFamily: "'DM Mono', monospace",
@@ -41,6 +43,7 @@ export default function Hero() {
         BARROS BUILDS · 2026
       </div>
 
+      {/* Statement — the bet, not a tagline */}
       <h1
         style={{
           fontFamily: "'Syne', sans-serif",
@@ -52,20 +55,20 @@ export default function Hero() {
           marginBottom: 20,
         }}
       >
-        I build{" "}
-        <span style={{ color: "var(--accent)" }}>data & AI</span>
+        1 year.{" "}
+        <span style={{ color: "var(--accent)" }}>10 products.</span>
         <br />
-        <span style={{ color: "var(--dim)" }}>products.</span>
+        <span style={{ color: "var(--dim)" }}>Building in public.</span>
       </h1>
 
       <p
         style={{
           color: "var(--muted)",
           fontSize: 14,
-          maxWidth: 420,
           marginBottom: 32,
           lineHeight: 1.7,
           fontWeight: 300,
+          maxWidth: 640,
         }}
       >
         Data analyst turned product builder. Shipping 10 AI-powered products in 2026 — building in public every step of the way.
@@ -81,14 +84,14 @@ export default function Hero() {
             borderRadius: 3,
             fontFamily: "'DM Mono', monospace",
             fontSize: 12,
-            textDecoration: "none",
             letterSpacing: "0.04em",
+            boxShadow: "var(--shadow-glow)",
           }}
         >
           see the build →
         </a>
         <a
-          href="https://www.linkedin.com/in/andrebarros6/"
+          href="https://www.linkedin.com/in/andrebarros-data/"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -99,7 +102,6 @@ export default function Hero() {
             border: "1px solid var(--border2)",
             fontFamily: "'DM Mono', monospace",
             fontSize: 12,
-            textDecoration: "none",
             letterSpacing: "0.04em",
           }}
         >
@@ -107,7 +109,7 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Stats */}
+      {/* Stats strip */}
       <div
         style={{
           marginTop: 44,
@@ -117,81 +119,38 @@ export default function Hero() {
           borderTop: "1px solid var(--border)",
         }}
       >
-        <div>
-          <div
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontWeight: 800,
-              fontSize: 30,
-              color: "var(--accent2)",
-              letterSpacing: "-0.03em",
-              lineHeight: 1,
-            }}
-          >
-            {stats.total}
+        {[
+          { num: stats.total, label: "PRODUCTS IN 2026" },
+          { num: stats.live, label: "LIVE NOW" },
+          { num: stats.users, label: "USERS" },
+        ].map(({ num, label }) => (
+          <div key={label}>
+            <div
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontWeight: 800,
+                fontSize: 30,
+                color: "var(--accent2)",
+                letterSpacing: "-0.03em",
+                lineHeight: 1,
+                fontVariantNumeric: "tabular-nums",
+              }}
+            >
+              {num}
+            </div>
+            <div
+              style={{
+                color: "var(--muted)",
+                fontSize: 10,
+                fontFamily: "'DM Mono', monospace",
+                letterSpacing: "0.07em",
+                marginTop: 3,
+              }}
+            >
+              {label}
+            </div>
           </div>
-          <div
-            style={{
-              color: "var(--muted)",
-              fontSize: 10,
-              fontFamily: "'DM Mono', monospace",
-              letterSpacing: "0.07em",
-              marginTop: 3,
-            }}
-          >
-            PRODUCTS IN 2026
-          </div>
-        </div>
-        <div>
-          <div
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontWeight: 800,
-              fontSize: 30,
-              color: "var(--accent2)",
-              letterSpacing: "-0.03em",
-              lineHeight: 1,
-            }}
-          >
-            {stats.live}
-          </div>
-          <div
-            style={{
-              color: "var(--muted)",
-              fontSize: 10,
-              fontFamily: "'DM Mono', monospace",
-              letterSpacing: "0.07em",
-              marginTop: 3,
-            }}
-          >
-            LIVE NOW
-          </div>
-        </div>
-        <div>
-          <div
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontWeight: 800,
-              fontSize: 30,
-              color: "var(--accent2)",
-              letterSpacing: "-0.03em",
-              lineHeight: 1,
-            }}
-          >
-            {stats.yearsExp}
-          </div>
-          <div
-            style={{
-              color: "var(--muted)",
-              fontSize: 10,
-              fontFamily: "'DM Mono', monospace",
-              letterSpacing: "0.07em",
-              marginTop: 3,
-            }}
-          >
-            YRS DATA EXP.
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

@@ -41,7 +41,7 @@ export default function Footer() {
         }}
       >
         <a
-          href="https://www.linkedin.com/in/andrebarros6/"
+          href="https://www.linkedin.com/in/andrebarros-data/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "var(--muted)", textDecoration: "none" }}
@@ -49,7 +49,7 @@ export default function Footer() {
           LinkedIn
         </a>
         <a
-          href="https://github.com/andrebarros6"
+          href="https://github.com/andrebarros6/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "var(--muted)", textDecoration: "none" }}
@@ -57,10 +57,10 @@ export default function Footer() {
           GitHub
         </a>
         <a
-          href="mailto:hello@barrosbuilds.com"
+          href="mailto:andre@barrosbuilds.com"
           style={{ color: "var(--muted)", textDecoration: "none" }}
         >
-          hello@barrosbuilds.com
+          andre@barrosbuilds.com
         </a>
       </div>
     </footer>
