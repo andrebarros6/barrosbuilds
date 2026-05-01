@@ -40,8 +40,9 @@ export const products: Product[] = [
     tag: "PRODUCT · AI · CAREER",
     description:
       "An AI-powered CV and cover letter tailoring engine that gets career transitioners past the ATS screen and into the interview.",
-    status: "in_progress",
+    status: "live",
     month: "Apr 2026",
+    url: "https://crafted.barrosbuilds.com",
     featured: true,
   },
   {
@@ -108,6 +109,6 @@ export const stats = {
   total: 10,
   live: products.filter((p) => p.status === "live").length,
   inProgress: products.filter((p) => p.status === "in_progress").length,
-  users: 20,  /* 13 OUT + 7 Painel — update manually as it grows */
+  users: 25,  /* 13 OUT + 7 Painel + 5 Crafted — update manually as it grows */
   yearsExp: "8+",
 };
