@@ -109,6 +109,6 @@ export const stats = {
   total: 10,
   live: products.filter((p) => p.status === "live").length,
   inProgress: products.filter((p) => p.status === "in_progress").length,
-  users: 25,  /* 13 OUT + 7 Painel + 5 Crafted — update manually as it grows */
+  users: 37,  /* 13 OUT + 8 Painel + 16 Crafted — update manually as it grows */
   yearsExp: "8+",
 };
