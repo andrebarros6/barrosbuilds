@@ -47,11 +47,14 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: "Coming Soon",
-    tag: "TBD",
-    description: "Chosen based on H1 learnings.",
-    status: "planned",
-    month: "Q3 2026",
+    name: "Petit Coeur",
+    tag: "FAMILY · BABY · MEMORIES",
+    description:
+      "A private photo album where families capture every moment of their baby growing up — together.",
+    status: "live",
+    month: "May 2026",
+    url: "https://petitcoeur.barrosbuilds.com/",
+    featured: true,
   },
   {
     id: 5,
