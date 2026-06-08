@@ -2,50 +2,52 @@ export default function Context() {
   return (
     <section
       style={{
-        padding: "48px 32px",
+        padding: "48px 0",
         borderBottom: "1px solid var(--border)",
       }}
     >
-      <div
-        style={{
-          fontFamily: "'DM Mono', monospace",
-          fontSize: 10,
-          color: "var(--accent2)",
-          letterSpacing: "0.14em",
-          marginBottom: 20,
-          display: "flex",
-          alignItems: "center",
-          gap: 8,
-        }}
-      >
-        <span style={{ display: "inline-block", width: 18, height: 1, background: "var(--accent2)" }} />
-        ABOUT
+      <div className="wrap">
+        <div
+          style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: 10,
+            color: "var(--accent2)",
+            letterSpacing: "0.14em",
+            marginBottom: 20,
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
+          <span style={{ display: "inline-block", width: 18, height: 1, background: "var(--accent2)" }} />
+          ABOUT
+        </div>
+
+        <p
+          style={{
+            color: "var(--text)",
+            fontSize: 16,
+            lineHeight: 1.75,
+            marginBottom: 16,
+            fontWeight: 400,
+            maxWidth: "62ch",
+          }}
+        >
+          8 years on a manufacturing floor at TE Connectivity. First to bring Power BI to the lines — 70% faster changeovers, 40% more output, 80% fewer defects. The data existed. I built the lens to read it differently.
+        </p>
+
+        <p
+          style={{
+            color: "var(--sand)",
+            fontSize: 16,
+            lineHeight: 1.75,
+            fontWeight: 400,
+            maxWidth: "62ch",
+          }}
+        >
+          Same instinct, new tools. AI products in 2026.
+        </p>
       </div>
-
-      <p
-        style={{
-          color: "var(--text)",
-          fontSize: 16,
-          lineHeight: 1.75,
-          marginBottom: 16,
-          fontWeight: 400,
-          maxWidth: "62ch",
-        }}
-      >
-        8 years on a manufacturing floor at TE Connectivity. First to bring Power BI to the lines — 70% faster changeovers, 40% more output, 80% fewer defects. The data existed. I built the lens to read it differently.
-      </p>
-
-      <p
-        style={{
-          color: "var(--sand)",
-          fontSize: 16,
-          lineHeight: 1.75,
-          fontWeight: 400,
-          maxWidth: "62ch",
-        }}
-      >
-        Same instinct, new tools. AI products in 2026.
-      </p>
     </section>
   );
 }

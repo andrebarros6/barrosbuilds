@@ -2,10 +2,6 @@ export default function Nav() {
   return (
     <nav
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "18px 32px",
         borderBottom: "1px solid var(--border)",
         background: "var(--bg)",
         position: "sticky",
@@ -14,54 +10,64 @@ export default function Nav() {
       }}
     >
       <div
-        style={{
-          fontFamily: "'Syne', sans-serif",
-          fontWeight: 800,
-          fontSize: 16,
-          color: "var(--text)",
-          letterSpacing: "-0.02em",
-        }}
-      >
-        barros<span style={{ color: "var(--accent)" }}>builds</span>
-      </div>
-
-      <ul
+        className="wrap"
         style={{
           display: "flex",
-          gap: 24,
-          listStyle: "none",
-          fontFamily: "'DM Mono', monospace",
-          fontSize: 11,
-          color: "var(--muted)",
-          letterSpacing: "0.04em",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "18px 32px",
         }}
       >
-        <li>
-          <a href="#projects" style={{ color: "var(--muted)" }}>projects</a>
-        </li>
-        <li>
-          <a href="#about" style={{ color: "var(--muted)" }}>about</a>
-        </li>
-      </ul>
+        <div
+          style={{
+            fontFamily: "'Syne', sans-serif",
+            fontWeight: 800,
+            fontSize: 16,
+            color: "var(--text)",
+            letterSpacing: "-0.02em",
+          }}
+        >
+          barros<span style={{ color: "var(--accent)" }}>builds</span>
+        </div>
 
-      <a
-        href="https://www.linkedin.com/in/andrebarros-data/"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          background: "var(--accent)",
-          color: "var(--bg)",
-          fontFamily: "'DM Mono', monospace",
-          fontSize: 11,
-          fontWeight: 500,
-          padding: "7px 16px",
-          borderRadius: 3,
-          letterSpacing: "0.04em",
-          boxShadow: "var(--shadow-glow)",
-        }}
-      >
-        follow the build →
-      </a>
+        <ul
+          style={{
+            display: "flex",
+            gap: 24,
+            listStyle: "none",
+            fontFamily: "'DM Mono', monospace",
+            fontSize: 11,
+            color: "var(--muted)",
+            letterSpacing: "0.04em",
+          }}
+        >
+          <li>
+            <a href="#projects" style={{ color: "var(--muted)" }}>projects</a>
+          </li>
+          <li>
+            <a href="#about" style={{ color: "var(--muted)" }}>about</a>
+          </li>
+        </ul>
+
+        <a
+          href="https://www.linkedin.com/in/andrebarros-data/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            background: "var(--accent)",
+            color: "var(--bg)",
+            fontFamily: "'DM Mono', monospace",
+            fontSize: 11,
+            fontWeight: 500,
+            padding: "7px 16px",
+            borderRadius: 3,
+            letterSpacing: "0.04em",
+            boxShadow: "var(--shadow-glow)",
+          }}
+        >
+          follow the build →
+        </a>
+      </div>
     </nav>
   );
 }

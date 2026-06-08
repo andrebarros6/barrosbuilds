@@ -2,66 +2,72 @@ export default function Footer() {
   return (
     <footer
       style={{
-        padding: "28px 32px",
+        padding: "28px 0",
         background: "var(--surface)",
         borderTop: "1px solid var(--border)",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
       }}
     >
       <div
-        style={{
-          fontFamily: "'Syne', sans-serif",
-          fontWeight: 800,
-          fontSize: 15,
-          color: "var(--text)",
-        }}
-      >
-        barros<span style={{ color: "var(--accent)" }}>builds</span>
-      </div>
-
-      <div
-        style={{
-          fontFamily: "'DM Mono', monospace",
-          fontSize: 10,
-          color: "var(--muted)",
-        }}
-      >
-        Building in public · 2026
-      </div>
-
-      <div
+        className="wrap"
         style={{
           display: "flex",
-          gap: 16,
-          fontFamily: "'DM Mono', monospace",
-          fontSize: 10,
-          color: "var(--muted)",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
-        <a
-          href="https://www.linkedin.com/in/andrebarros-data/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "var(--muted)", textDecoration: "none" }}
+        <div
+          style={{
+            fontFamily: "'Syne', sans-serif",
+            fontWeight: 800,
+            fontSize: 15,
+            color: "var(--text)",
+          }}
         >
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/andrebarros6/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "var(--muted)", textDecoration: "none" }}
+          barros<span style={{ color: "var(--accent)" }}>builds</span>
+        </div>
+
+        <div
+          style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: 10,
+            color: "var(--muted)",
+          }}
         >
-          GitHub
-        </a>
-        <a
-          href="mailto:andre@barrosbuilds.com"
-          style={{ color: "var(--muted)", textDecoration: "none" }}
+          Building in public · 2026
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            gap: 16,
+            fontFamily: "'DM Mono', monospace",
+            fontSize: 10,
+            color: "var(--muted)",
+          }}
         >
-          andre@barrosbuilds.com
-        </a>
+          <a
+            href="https://www.linkedin.com/in/andrebarros-data/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "var(--muted)", textDecoration: "none" }}
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/andrebarros6/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "var(--muted)", textDecoration: "none" }}
+          >
+            GitHub
+          </a>
+          <a
+            href="mailto:andre@barrosbuilds.com"
+            style={{ color: "var(--muted)", textDecoration: "none" }}
+          >
+            andre@barrosbuilds.com
+          </a>
+        </div>
       </div>
     </footer>
   );
