@@ -24,7 +24,6 @@ export default function FollowTheBuild() {
       />
 
       <div className="wrap" style={{ position: "relative" }}>
-        <div style={{ maxWidth: 560 }}>
           <div
             style={{
               fontFamily: "'DM Mono', monospace",
@@ -62,7 +61,6 @@ export default function FollowTheBuild() {
               lineHeight: 1.7,
               marginBottom: 32,
               fontWeight: 400,
-              maxWidth: "52ch",
             }}
           >
             Every product — what shipped, what broke, the real numbers. Building in public on LinkedIn, every step.
@@ -89,7 +87,6 @@ export default function FollowTheBuild() {
           >
             Follow on LinkedIn →
           </a>
-        </div>
       </div>
     </section>
   );

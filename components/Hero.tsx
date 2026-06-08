@@ -69,7 +69,6 @@ export default function Hero() {
             marginBottom: 32,
             lineHeight: 1.7,
             fontWeight: 400,
-            maxWidth: 640,
           }}
         >
           Data analyst turned product builder. Shipping 10 AI-powered products in 2026 — building in public every step of the way.
