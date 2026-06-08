@@ -30,7 +30,6 @@ export default function Context() {
             lineHeight: 1.75,
             marginBottom: 16,
             fontWeight: 400,
-            maxWidth: "62ch",
           }}
         >
           8 years on a manufacturing floor at TE Connectivity. First to bring Power BI to the lines — 70% faster changeovers, 40% more output, 80% fewer defects. The data existed. I built the lens to read it differently.
@@ -42,7 +41,6 @@ export default function Context() {
             fontSize: 16,
             lineHeight: 1.75,
             fontWeight: 400,
-            maxWidth: "62ch",
           }}
         >
           Same instinct, new tools. AI products in 2026.
