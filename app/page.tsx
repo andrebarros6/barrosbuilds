@@ -1,9 +1,9 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import Context from "@/components/Context";
 import ProductTracker from "@/components/ProductTracker";
 import FeaturedProducts from "@/components/FeaturedProducts";
-import Context from "@/components/Context";
-import Signal from "@/components/Signal";
+import FollowTheBuild from "@/components/FollowTheBuild";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -11,10 +11,10 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
+      <Context />
       <ProductTracker />
       <FeaturedProducts />
-      <Context />
-      <Signal />
+      <FollowTheBuild />
       <Footer />
     </main>
   );

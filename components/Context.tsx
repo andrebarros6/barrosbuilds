@@ -25,10 +25,11 @@ export default function Context() {
       <p
         style={{
           color: "var(--text)",
-          fontSize: 15,
-          lineHeight: 1.7,
+          fontSize: 16,
+          lineHeight: 1.75,
           marginBottom: 16,
           fontWeight: 400,
+          maxWidth: "62ch",
         }}
       >
         8 years on a manufacturing floor at TE Connectivity. First to bring Power BI to the lines — 70% faster changeovers, 40% more output, 80% fewer defects. The data existed. I built the lens to read it differently.
@@ -36,10 +37,11 @@ export default function Context() {
 
       <p
         style={{
-          color: "var(--muted)",
-          fontSize: 15,
-          lineHeight: 1.7,
-          fontWeight: 300,
+          color: "var(--sand)",
+          fontSize: 16,
+          lineHeight: 1.75,
+          fontWeight: 400,
+          maxWidth: "62ch",
         }}
       >
         Same instinct, new tools. AI products in 2026.

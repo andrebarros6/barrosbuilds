@@ -49,7 +49,7 @@ export default function FeaturedProducts() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
           gap: 2,
         }}
       >
@@ -138,9 +138,24 @@ export default function FeaturedProducts() {
                 fontSize: 11,
                 color: product.status === "live" ? "var(--accent)" : "var(--muted)",
                 letterSpacing: "0.04em",
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
               }}
             >
-              {product.url ? "View project →" : "In progress →"}
+              {product.url ? (
+                <>
+                  <span style={{
+                    display: "inline-block",
+                    width: 6,
+                    height: 6,
+                    borderRadius: "50%",
+                    background: "var(--color-live)",
+                    boxShadow: "0 0 6px rgba(196,89,58,0.6)",
+                  }} />
+                  Open project →
+                </>
+              ) : "In progress →"}
             </div>
 
             {/* Ghost month */}

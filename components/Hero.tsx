@@ -111,6 +111,7 @@ export default function Hero() {
 
       {/* Stats strip */}
       <div
+        className="hero-stats"
         style={{
           marginTop: 44,
           display: "flex",

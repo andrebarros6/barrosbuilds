@@ -45,7 +45,9 @@ export default function Nav() {
       </ul>
 
       <a
-        href="mailto:andre@barrosbuilds.com"
+        href="https://www.linkedin.com/in/andrebarros-data/"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
           background: "var(--accent)",
           color: "var(--bg)",
@@ -58,7 +60,7 @@ export default function Nav() {
           boxShadow: "var(--shadow-glow)",
         }}
       >
-        work with me →
+        follow the build →
       </a>
     </nav>
   );
