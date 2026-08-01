@@ -58,10 +58,11 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: "Coming Soon",
-    tag: "TBD",
-    description: "Chosen based on H1 learnings.",
-    status: "planned",
+    name: "Bitcoin Tools Portugal",
+    tag: "DATA · BITCOIN · PORTUGAL",
+    description:
+      "A set of tools to evaluate the consumer price index in Portugal, comparing euro vs. bitcoin purchasing power across time.",
+    status: "in_progress",
     month: "Q3 2026",
   },
   {
