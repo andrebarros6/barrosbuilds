@@ -113,6 +113,6 @@ export const stats = {
   total: 10,
   live: products.filter((p) => p.status === "live").length,
   inProgress: products.filter((p) => p.status === "in_progress").length,
-  users: 94,  /* 13 OUT + 7 Painel + 74 Crafted + 0 Petit Coeur — update manually as it grows */
+  users: 121,  /* 13 OUT + 7 Painel + 101 Crafted + 0 Petit Coeur + 0 Bitcoin Tools — update manually as it grows */
   yearsExp: "8+",
 };
