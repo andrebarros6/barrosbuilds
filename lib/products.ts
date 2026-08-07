@@ -63,7 +63,7 @@ export const products: Product[] = [
     description:
       "Compares Bitcoin's return against Portuguese inflation year by year, so you can see whether it actually protected your purchasing power — not just whether the price went up.",
     status: "live",
-    month: "Q3 2026",
+    month: "Aug 2026",
     url: "https://bitcoinpt.barrosbuilds.com",
     featured: true,
   },
