@@ -58,12 +58,14 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: "Bitcoin Tools Portugal",
-    tag: "DATA · BITCOIN · PORTUGAL",
+    name: "BTC vs Inflação",
+    tag: "BITCOIN · INFLATION · PORTUGAL",
     description:
-      "A set of tools to evaluate the consumer price index in Portugal, comparing euro vs. bitcoin purchasing power across time.",
-    status: "in_progress",
+      "Compares Bitcoin's return against Portuguese inflation year by year, so you can see whether it actually protected your purchasing power — not just whether the price went up.",
+    status: "live",
     month: "Q3 2026",
+    url: "https://bitcoinpt.barrosbuilds.com",
+    featured: true,
   },
   {
     id: 6,
