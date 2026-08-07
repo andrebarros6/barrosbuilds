@@ -58,7 +58,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: "BTC vs Inflação",
+    name: "Bitcoin PT",
     tag: "BITCOIN · INFLATION · PORTUGAL",
     description:
       "Compares Bitcoin's return against Portuguese inflation year by year, so you can see whether it actually protected your purchasing power — not just whether the price went up.",
