@@ -2,27 +2,14 @@ export default function FollowTheBuild() {
   return (
     <section
       style={{
-        padding: "72px 0",
+        padding: "56px 0",
         borderBottom: "1px solid var(--border)",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Subtle glow from below */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: -80,
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: 600,
-          height: 300,
-          background: "radial-gradient(ellipse, var(--accent) 0%, transparent 60%)",
-          opacity: 0.07,
-          pointerEvents: "none",
-        }}
-      />
-
+      {/* Secondary CTA — the newsletter waitlist directly above owns the
+          terracotta fill and the glow, so this one stays understated. */}
       <div className="wrap" style={{ position: "relative" }}>
           <div
             style={{
@@ -44,7 +31,7 @@ export default function FollowTheBuild() {
             style={{
               fontFamily: "'Syne', sans-serif",
               fontWeight: 800,
-              fontSize: "clamp(26px, 3.5vw, 38px)",
+              fontSize: "clamp(22px, 2.8vw, 30px)",
               letterSpacing: "-0.02em",
               lineHeight: 1.1,
               marginBottom: 16,
@@ -74,15 +61,15 @@ export default function FollowTheBuild() {
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              background: "var(--accent)",
-              color: "var(--bg)",
+              background: "transparent",
+              color: "var(--sand)",
+              border: "1px solid var(--border2)",
               fontFamily: "'DM Mono', monospace",
               fontSize: 12,
               fontWeight: 500,
               padding: "12px 24px",
               borderRadius: 3,
               letterSpacing: "0.04em",
-              boxShadow: "var(--shadow-glow)",
             }}
           >
             Follow on LinkedIn →

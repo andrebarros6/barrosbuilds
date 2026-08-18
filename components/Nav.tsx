@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Nav() {
   return (
     <nav
@@ -42,10 +44,13 @@ export default function Nav() {
           }}
         >
           <li>
-            <a href="#projects" style={{ color: "var(--muted)" }}>projects</a>
+            <Link href="/#projects" style={{ color: "var(--muted)" }}>projects</Link>
           </li>
           <li>
-            <a href="#about" style={{ color: "var(--muted)" }}>about</a>
+            <Link href="/#about" style={{ color: "var(--muted)" }}>about</Link>
+          </li>
+          <li>
+            <Link href="/log" style={{ color: "var(--muted)" }}>learn ai</Link>
           </li>
         </ul>
 
