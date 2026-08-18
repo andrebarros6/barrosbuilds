@@ -3,34 +3,35 @@
 Email capture for the upcoming AI learning newsletter. Section lives on the
 homepage below the products grid.
 
-**Status:** code complete, **not yet validated against a live Supabase project.**
-Do not deploy or commit until the smoke test at the bottom passes.
+**Status: live in production.** Schema applied, smoke test passed, welcome
+email verified end to end, and a black-box test pass run against the deployment
+on 2026-08-18 (see "Known limitation" at the bottom).
 
 ## Pieces
 
 | File | Role |
 |------|------|
 | [components/NewsletterWaitlist.tsx](../components/NewsletterWaitlist.tsx) | Compact homepage block (~11 words) |
-| [app/newsletter/page.tsx](../app/newsletter/page.tsx) | Full pitch — the long-form copy |
+| [app/log/page.tsx](../app/log/page.tsx) | Full pitch — the long-form copy |
 | [components/WaitlistForm.tsx](../components/WaitlistForm.tsx) | Shared capture form, used by both |
 | [app/api/waitlist/route.ts](../app/api/waitlist/route.ts) | POST endpoint, validation, insert |
-| [lib/newsletter.ts](../lib/newsletter.ts) | `[NAME]` / `[MONTH]` placeholders |
+| [lib/newsletter.ts](../lib/newsletter.ts) | Name, headline, first-issue month |
 
 **Two surfaces, one form.** The homepage keeps a short block with an inline
-field plus a "What this is →" link; `/newsletter` carries the full pitch for
+field plus a "What this is →" link; `/log` carries the full pitch for
 readers who click through. Both render `WaitlistForm` and POST to the same
 endpoint, so validation and duplicate handling live in one place.
 
 The homepage block is deliberately short — the rest of the page runs 12–33
 words per section, and a 155-word block read as a landing page bolted into
-the scroll. The long copy wasn't cut, it moved to `/newsletter`.
+the scroll. The long copy wasn't cut, it moved to `/log`.
 
-`source` distinguishes the two (`homepage` / `newsletter-page`) so you can see
+`source` distinguishes the two (`homepage` / `log-page`) so you can see
 which surface converts. It's allowlisted server-side; anything else stores as
 `unknown`.
 
 This is the first API route on the site — it was fully static before. Vercel
-will now build it as a serverless function. `/newsletter` stays static.
+will now build it as a serverless function. `/log` stays static.
 
 ## 1. Create the Supabase project
 
@@ -117,29 +118,28 @@ Confirm in Table Editor:
 - `src@example.com` has `source = 'unknown'`
 
 Also submit through both UIs and confirm `source` reads `homepage` from `/`
-and `newsletter-page` from `/newsletter`.
+and `log-page` from `/log`.
 
 Then delete the test rows.
 
-## Filling in [NAME] and [MONTH]
+## Naming
 
-Both are `null` in [lib/newsletter.ts](../lib/newsletter.ts) and render as
-literal `[NAME]` / `[MONTH]` on the page. Set them there — the headline
-swaps to the short form automatically once the name exists.
+The product is **Learning Log**; the first issue ships **September**. Both live
+in [lib/newsletter.ts](../lib/newsletter.ts). In user-facing copy it is never
+called a "newsletter" — the descriptor is "a public build log".
 
 ## Not built yet (deliberately)
 
-Send pipeline (Resend), subscriber position tracking, weekly cron, archive
-subdomain, progress tracking, comments, accounts. The table has
-`unsubscribed_at` reserved because unsubscribe is a legal requirement the
-schema shouldn't have to migrate for — nothing reads it yet.
+Subscriber position tracking, weekly cron, archive subdomain, progress
+tracking, comments, accounts. The welcome email and unsubscribe *are* built —
+see [welcome-email.md](welcome-email.md).
 
 ### GDPR note
 
-You're collecting personal data from EU users. Before the first send you need
-a privacy policy reachable from the site and a working unsubscribe link in
-every email. Neither is a blocker for collecting waitlist signups, but both
-are blockers for sending.
+You're collecting personal data from EU users. Unsubscribe is built and
+verified. A privacy policy exists at `/privacy` but is **deliberately not
+linked** — see [privacy-policy.md](privacy-policy.md). Link it before the form
+gets real traffic.
 
 
 ## Known limitation: rate limiting is per-instance
