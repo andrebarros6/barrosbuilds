@@ -25,7 +25,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "OUT Newsletter",
+    name: "OUT",
     tag: "MEDIA · LOCAL · EUROPE",
     description:
       "A weekly events newsletter that gets you off your screen and out into the world.",
