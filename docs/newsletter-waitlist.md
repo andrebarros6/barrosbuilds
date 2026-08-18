@@ -140,3 +140,32 @@ You're collecting personal data from EU users. Before the first send you need
 a privacy policy reachable from the site and a working unsubscribe link in
 every email. Neither is a blocker for collecting waitlist signups, but both
 are blockers for sending.
+
+
+## Known limitation: rate limiting is per-instance
+
+Measured 2026-08-18 against production: **30 concurrent POSTs all passed the
+rate limiter, zero 429s.** Vercel served the burst across roughly 6 serverless
+instances, each with its own empty in-memory counter, so the effective limit
+under concurrency is `5 x instances`, not 5.
+
+Sequential requests from one browser *are* limited (verified). Concurrent
+requests are not.
+
+**This is accepted, not fixed.** What actually protects the list:
+
+| Protection | Works across instances? |
+|---|---|
+| Unique index on `lower(email)` | yes — no duplicate rows, ever |
+| Honeypot `company` field | yes — stateless |
+| ASCII + control-char validation | yes — stateless |
+| In-memory rate limit | **no** — per-instance only |
+
+Worst realistic case is a burst of junk-but-valid signups: new rows plus
+welcome emails to addresses that did technically submit the form. Annoying,
+not damaging, and every one of them can unsubscribe.
+
+If it ever becomes a real problem, the fix is a Vercel Firewall rate-limit rule
+(runs at the edge, before the function, so it works across all instances)
+rather than more application code. A Supabase-backed counter would also work
+but adds a round-trip to every signup.
