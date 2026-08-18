@@ -7,8 +7,15 @@ export const runtime = "nodejs";
 
 // Deliberately loose: the only thing worth rejecting up front is input that
 // clearly isn't an address. Real deliverability is confirmed at send time.
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+// ASCII-only by design — `[^\s@]` would otherwise admit null bytes (which
+// Postgres rejects in `text`, surfacing as a 500) and emoji domains that no
+// mail server will ever route.
+const EMAIL = /^[A-Za-z0-9!#$%&'*+/=?^_`{|}~.-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 const MAX_EMAIL_LENGTH = 254; // RFC 5321
+
+// Reject C0/C1 control characters outright. Postgres cannot store a NUL
+// byte in a text column, so letting one through turns a 400 into a 500.
+const CONTROL_CHARS = /[\u0000-\u001F\u007F-\u009F]/;
 
 // Best-effort in-memory throttle. Serverless instances are per-region and
 // recycle, so this stops casual repeat submits, not a determined attacker.
@@ -68,7 +75,11 @@ export async function POST(request: Request) {
   }
 
   const email = raw.trim().toLowerCase();
-  if (email.length > MAX_EMAIL_LENGTH || !EMAIL.test(email)) {
+  if (
+    email.length > MAX_EMAIL_LENGTH ||
+    CONTROL_CHARS.test(email) ||
+    !EMAIL.test(email)
+  ) {
     return NextResponse.json({ error: "That doesn't look like a valid email." }, { status: 400 });
   }
 
