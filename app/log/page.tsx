@@ -3,6 +3,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import WaitlistForm from "@/components/WaitlistForm";
+import Curriculum from "@/components/Curriculum";
 import {
   NEWSLETTER_HEADLINE,
   NEWSLETTER_NAME,
@@ -184,6 +185,8 @@ export default function NewsletterPage() {
           </div>
         </div>
       </section>
+
+      <Curriculum />
 
       <Footer />
     </main>
