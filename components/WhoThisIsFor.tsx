@@ -5,11 +5,16 @@
  * technical background joins, gets issue 1 on tokenizers and context windows,
  * and churns — bad for them and bad for the list.
  *
- * The bar deliberately says READ code, not WRITE it. Per the curriculum
- * definition: several issues (9, 17, 26) require evaluating code you did not
- * write, but almost none require authoring much from scratch. People building
- * real things with Claude who read and check its output are squarely the
- * audience — "you must be a developer" would wrongly exclude them.
+ * The bar leads with VERIFICATION, not code reading. Per the curriculum
+ * definition: most of the sequence trains building the apparatus that tells
+ * you whether output is right (all of Track 3, plus issues 17, 26, 27), which
+ * needs little code reading. Code reading is the secondary floor — issues 9
+ * and 22 turn on bugs you would never have thought to write a test for, and
+ * those two collapse without it.
+ *
+ * Order matters here: validation first because it is the daily skill, code
+ * reading second because it is a floor. "You must be a developer" would
+ * wrongly exclude people who ship real things with Claude and check its work.
  *
  * Tone rule: this states a starting line, it does not gatekeep. The whole
  * posture of Learning Log is "I'm not an expert" — an audience note that reads
@@ -101,10 +106,17 @@ export default function WhoThisIsFor() {
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
-                You can read code, run it, and tell when it&apos;s wrong. You
-                don&apos;t have to write much of it — increasingly that&apos;s
-                the whole point — but you do need to spot a plausible answer
-                that isn&apos;t right.
+                You can set up checks that tell you whether the output is
+                right — tests, a validation script, a comparison against
+                something you trust. Not because you enjoy it, but because
+                &ldquo;it looks fine&rdquo; stops working fast.
+              </li>
+              <li style={listItem}>
+                <span style={marker}>→</span>
+                You can read code when the checks aren&apos;t enough. You
+                won&apos;t write much of it — increasingly that&apos;s the whole
+                point — but some bugs are ones you&apos;d never have thought to
+                test for.
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
@@ -143,7 +155,7 @@ export default function WhoThisIsFor() {
               <li style={listItem}>
                 <span style={marker}>→</span>
                 To be a professional engineer. If you ship things with Claude
-                and read what it gives you, that counts.
+                and check its work rather than trusting it, that counts.
               </li>
             </ul>
           </div>
