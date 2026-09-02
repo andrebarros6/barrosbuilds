@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import WaitlistForm from "@/components/WaitlistForm";
 import Curriculum from "@/components/Curriculum";
+import WhoThisIsFor from "@/components/WhoThisIsFor";
 import {
   NEWSLETTER_HEADLINE,
   NEWSLETTER_NAME,
@@ -185,6 +186,8 @@ export default function NewsletterPage() {
           </div>
         </div>
       </section>
+
+      <WhoThisIsFor />
 
       <Curriculum />
 
