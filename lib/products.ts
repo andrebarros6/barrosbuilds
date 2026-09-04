@@ -69,11 +69,14 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: "Coming Soon",
-    tag: "TBD",
-    description: "Chosen based on market feedback.",
-    status: "planned",
-    month: "Q3 2026",
+    name: "Learning Log",
+    tag: "AI · LEARNING · NEWSLETTER",
+    description:
+      "A public build log for learning AI by building it — one concept a week, a hands-on exercise you can run, and the failure log.",
+    status: "in_progress",
+    month: "Sep 2026",
+    url: "/log",
+    featured: true,
   },
   {
     id: 7,
