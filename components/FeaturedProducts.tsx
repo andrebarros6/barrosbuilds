@@ -2,6 +2,10 @@
 
 import { featuredProducts } from "@/lib/products";
 
+/* Internal routes (e.g. /log) stay in the same tab; only real off-site
+   products get target="_blank". */
+const isExternal = (url?: string) => Boolean(url && !url.startsWith("/"));
+
 export default function FeaturedProducts() {
   return (
     <section
@@ -42,7 +46,7 @@ export default function FeaturedProducts() {
                 color: "var(--text)",
               }}
             >
-              Live Projects
+              Live &amp; In Progress
             </div>
           </div>
         </div>
@@ -58,8 +62,8 @@ export default function FeaturedProducts() {
             <a
               key={product.id}
               href={product.url ?? "#projects"}
-              target={product.url ? "_blank" : undefined}
-              rel={product.url ? "noopener noreferrer" : undefined}
+              target={isExternal(product.url) ? "_blank" : undefined}
+              rel={isExternal(product.url) ? "noopener noreferrer" : undefined}
               style={{
                 background: "var(--surface)",
                 padding: 28,
@@ -137,7 +141,7 @@ export default function FeaturedProducts() {
                 style={{
                   fontFamily: "'DM Mono', monospace",
                   fontSize: 11,
-                  color: product.status === "live" ? "var(--accent)" : "var(--muted)",
+                  color: product.status === "live" ? "var(--accent)" : "var(--color-progress)",
                   letterSpacing: "0.04em",
                   display: "flex",
                   alignItems: "center",
@@ -151,10 +155,16 @@ export default function FeaturedProducts() {
                       width: 6,
                       height: 6,
                       borderRadius: "50%",
-                      background: "var(--color-live)",
-                      boxShadow: "0 0 6px rgba(196,89,58,0.6)",
+                      background:
+                        product.status === "live"
+                          ? "var(--color-live)"
+                          : "var(--color-progress)",
+                      boxShadow:
+                        product.status === "live"
+                          ? "0 0 6px rgba(196,89,58,0.6)"
+                          : "none",
                     }} />
-                    Open project →
+                    {product.status === "live" ? "Open project →" : "In progress — read more →"}
                   </>
                 ) : "In progress →"}
               </div>

@@ -2,6 +2,9 @@
 
 import { products, type ProductStatus } from "@/lib/products";
 
+/* Internal routes (e.g. /log) stay in the same tab. */
+const isExternal = (url?: string) => Boolean(url && !url.startsWith("/"));
+
 const statusLabel: Record<ProductStatus, string> = {
   live: "LIVE",
   in_progress: "IN PROGRESS",
@@ -109,8 +112,8 @@ export default function ProductTracker() {
               <a
                 key={product.id}
                 href={product.url ?? undefined}
-                target={product.url ? "_blank" : undefined}
-                rel={product.url ? "noopener noreferrer" : undefined}
+                target={isExternal(product.url) ? "_blank" : undefined}
+                rel={isExternal(product.url) ? "noopener noreferrer" : undefined}
                 style={{
                   background: "var(--surface2)",
                   padding: "14px 12px",
@@ -152,7 +155,7 @@ export default function ProductTracker() {
                     fontWeight: 700,
                     fontSize: 11,
                     lineHeight: 1.3,
-                    color: isLive ? "var(--text)" : "var(--muted)",
+                    color: isLive || isProg ? "var(--text)" : "var(--muted)",
                     flex: 1,
                   }}
                 >
