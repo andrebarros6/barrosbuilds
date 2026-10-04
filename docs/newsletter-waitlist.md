@@ -124,7 +124,7 @@ Then delete the test rows.
 
 ## Naming
 
-The product is **Learning Log**; the first issue ships **September**. Both live
+The product is **Learning Log**; the first issue ships **October**. Both live
 in [lib/newsletter.ts](../lib/newsletter.ts). In user-facing copy it is never
 called a "newsletter" — the descriptor is "a public build log".
 

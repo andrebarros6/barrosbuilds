@@ -9,7 +9,7 @@
  */
 export const NEWSLETTER_NAME = "Learning Log";
 export const NEWSLETTER_DESCRIPTOR = "a public build log";
-export const FIRST_ISSUE_MONTH: string | null = "September";
+export const FIRST_ISSUE_MONTH: string | null = "October";
 export const MONTH_PLACEHOLDER = "[MONTH]";
 
 export const NEWSLETTER_HEADLINE = "Learn AI by building it. Every week.";
