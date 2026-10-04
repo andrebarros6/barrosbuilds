@@ -100,7 +100,7 @@ Confirm:
 - Response is `{"ok":true}`
 - The email arrives (check spam on the first send from a new domain)
 - Table row has `unsubscribe_token` set and `welcome_sent_at` non-NULL
-- Clicking **Unsubscribe** in the footer sets `unsubscribed_at`
+- Clicking **Unsubscribe** in the footer deletes the row
 - Submitting the same address again returns `alreadySubscribed` and sends
   **no** second email
 

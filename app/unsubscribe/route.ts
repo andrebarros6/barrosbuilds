@@ -27,14 +27,16 @@ async function unsubscribe(token: string | null): Promise<boolean> {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 
+  // Delete rather than flag. The privacy policy promises the address is
+  // removed on unsubscribe, and a deleted row lets the same person sign up
+  // again later instead of hitting the unique index as "already subscribed".
   const { error } = await supabase
     .from("newsletter_waitlist")
-    .update({ unsubscribed_at: new Date().toISOString() })
-    .eq("unsubscribe_token", token)
-    .is("unsubscribed_at", null);
+    .delete()
+    .eq("unsubscribe_token", token);
 
   if (error) {
-    console.error("unsubscribe: update failed", error);
+    console.error("unsubscribe: delete failed", error);
     return false;
   }
   return true;
