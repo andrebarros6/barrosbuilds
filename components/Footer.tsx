@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer
@@ -67,6 +69,18 @@ export default function Footer() {
           >
             andre@barrosbuilds.com
           </a>
+          <Link
+            href="/privacy"
+            style={{ color: "var(--muted)", textDecoration: "none" }}
+          >
+            Privacy
+          </Link>
+          <Link
+            href="/terms"
+            style={{ color: "var(--muted)", textDecoration: "none" }}
+          >
+            Terms
+          </Link>
         </div>
       </div>
     </footer>
