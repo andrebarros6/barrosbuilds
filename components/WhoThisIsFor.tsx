@@ -5,16 +5,17 @@
  * technical background joins, gets issue 1 on tokenizers and context windows,
  * and churns — bad for them and bad for the list.
  *
- * The bar leads with VERIFICATION, not code reading. Per the curriculum
- * definition: most of the sequence trains building the apparatus that tells
- * you whether output is right (all of Track 3, plus issues 17, 26, 27), which
- * needs little code reading. Code reading is the secondary floor — issues 9
- * and 22 turn on bugs you would never have thought to write a test for, and
- * those two collapse without it.
+ * Verification is TAUGHT, not assumed. Per the curriculum definition: most of
+ * the sequence trains building the apparatus that tells you whether output is
+ * right (all of Track 3, plus issues 17, 26, 27). Asking readers to arrive
+ * already able to set up checks would ask for the skill the course exists to
+ * give them. What is assumed is the disposition: wanting to know whether the
+ * output is right.
  *
- * Order matters here: validation first because it is the daily skill, code
- * reading second because it is a floor. "You must be a developer" would
- * wrongly exclude people who ship real things with Claude and check its work.
+ * Code reading is the one real floor — issues 9 and 22 turn on bugs you would
+ * never have thought to write a test for, and those two collapse without it.
+ * "You must be a developer" would wrongly exclude people who ship real things
+ * with Claude and care whether they are right.
  *
  * Tone rule: this states a starting line, it does not gatekeep. The whole
  * posture of Learning Log is "I'm not an expert" — an audience note that reads
@@ -106,23 +107,23 @@ export default function WhoThisIsFor() {
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
-                You can set up checks that tell you whether the output is
-                right — tests, a validation script, a comparison against
-                something you trust. Not because you enjoy it, but because
-                &ldquo;it looks fine&rdquo; stops working fast.
+                You want to know whether the output is right, not just whether
+                it looks right. &ldquo;It looks fine&rdquo; stops working fast,
+                and you&apos;ve noticed.
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
-                You can read code when the checks aren&apos;t enough. You
-                won&apos;t write much of it — increasingly that&apos;s the whole
-                point — but some bugs are ones you&apos;d never have thought to
-                test for.
+                You can read code when you need to. You won&apos;t write much
+                of it — increasingly that&apos;s the whole point — but some
+                bugs are ones you&apos;d never have thought to test for.
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
-                You have something of your own to point this at. A repo, a
-                dataset, a workflow. Every exercise ends by applying it to your
-                own work.
+                Ideally, something of your own to point this at: a long chat
+                you rely on, a repo you work in, a dataset you know well, a
+                task you repeat every week. Every exercise ends by applying it
+                to your own work. Nothing to hand yet? Each exercise comes with
+                a sample to start on.
               </li>
             </ul>
           </div>
@@ -142,6 +143,12 @@ export default function WhoThisIsFor() {
             <ul style={{ listStyle: "none" }}>
               <li style={listItem}>
                 <span style={marker}>→</span>
+                To already know how to check the output. Tests, evals,
+                comparisons against something you trust — setting those up is
+                most of what this teaches.
+              </li>
+              <li style={listItem}>
+                <span style={marker}>→</span>
                 Any experience building with an LLM. If you&apos;ve only ever
                 used the chat window, you&apos;re exactly who this is written
                 for.
@@ -155,7 +162,7 @@ export default function WhoThisIsFor() {
               <li style={listItem}>
                 <span style={marker}>→</span>
                 To be a professional engineer. If you ship things with Claude
-                and check its work rather than trusting it, that counts.
+                and care whether they&apos;re right, that counts.
               </li>
             </ul>
           </div>
