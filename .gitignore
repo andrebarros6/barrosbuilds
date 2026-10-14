@@ -41,3 +41,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Learning Log send log and previews (hashed keys, but local-only)
+/.sends/
