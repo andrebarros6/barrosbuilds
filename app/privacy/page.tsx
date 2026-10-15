@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "What data Barros Builds collects, why, where it's stored, and how to get it deleted.",
 };
 
-const LAST_UPDATED = "18 August 2026";
+const LAST_UPDATED = "15 October 2026";
 
 const h2: React.CSSProperties = {
   fontFamily: "'Syne', sans-serif",
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
           <h2 style={h2}>Why</h2>
           <p style={p}>
             To send you the Learning Log — one email a week with a concept, an
-            exercise, and what broke. The legal basis is your consent, given when
+            exercise, and what moved in AI that week. The legal basis is your consent, given when
             you submitted the form.
           </p>
 

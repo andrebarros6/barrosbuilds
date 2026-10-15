@@ -22,7 +22,7 @@ export function welcomeEmail(unsubscribeToken: string) {
 
   const text = `You're in.
 
-First issue ships ${month}. Every week: one concept, a hands-on exercise you can run, and the failure log from my own week.
+First issue ships ${month}. Every week: one concept, a hands-on exercise you can run, and what moved in AI that week.
 
 The exercises ship as public repos — yours to keep.
 
@@ -46,7 +46,7 @@ ${SITE_URL}`;
         </td></tr>
 
         <tr><td style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:#a89880;padding-bottom:16px;">
-          First issue ships <strong style="color:#e8dcc8;">${month}</strong>. Every week: one concept, a hands-on exercise you can run, and the failure log from my own week.
+          First issue ships <strong style="color:#e8dcc8;">${month}</strong>. Every week: one concept, a hands-on exercise you can run, and what moved in AI that week.
         </td></tr>
 
         <tr><td style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:#a89880;padding-bottom:28px;">

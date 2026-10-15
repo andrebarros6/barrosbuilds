@@ -11,7 +11,7 @@ status: draft
 
 # What the model actually sees
 
-*This is the first of thirty. One concept a week, an exercise you run yourself, and an honest log of what broke. I'm learning this properly and publishing as I go — you're getting the same thing I am, at the same time.*
+*This is the first of thirty. One concept a week and an exercise you run yourself. I'm learning this properly and publishing as I go — you're getting the same thing I am, at the same time.*
 
 *I'm assuming you've used a chat model and that you'd rather check its work than trust it. I'm not assuming you know how to check yet, or that you've built anything with one. That's the gap this closes.*
 
@@ -98,30 +98,9 @@ Per the curriculum: this block is shared, written the week of sending, and
 must stand alone. Subscribers are at different points in the sequence, so it
 cannot assume the reader just read the concept above.
 
-"What broke" must be real and verifiable. Never invent it. If nothing broke
-this week, that is a signal the week's exercise was too small — say that
-instead of manufacturing a failure.
+The dated block is "This week in AI" only. "What broke" and "From the build"
+were dropped on 2026-10-15 (planning PRD, D11).
 -->
-
-## What broke
-
-> **[TO WRITE — ~200–300 words, from your actual week.]**
->
-> Real, specific, verifiable. Name the thing, what you expected, what happened, what it cost you, and what you changed.
->
-> A natural candidate if it fits honestly: the token-counting gap from building this exercise — the moment your character-based estimate turned out to be materially wrong on real content. Only use it if that genuinely happened this week.
->
-> Must stand alone. Do not open with "as we saw above."
-
-## From the build
-
-Claude Haiku 5.5 came out last week. Crafted runs three of its calls on Haiku 4.5 (parsing the CV, parsing the job description, scoring the fit), so I checked what switching would take. It isn't a one-line change.
-
-Crafted decides how much of a job description the model sees in characters, not tokens: the first 2,000 characters when tailoring the CV, 1,500 when scoring, 1,000 for the cover letter. None of those limits comes from a token count. On the new tokenizer, the same 2,000 characters cost roughly 30% more tokens, so every limit shifts without a line of code changing.
-
-There's a second catch. Six places in the code read the reply as `content[0]` and expect text. Haiku 5.5 thinks by default, so the first block of a reply can be a thinking block instead.
-
-So the order is: count the real prompts first, then switch the model.
 
 ## This week in AI
 
@@ -142,25 +121,21 @@ So the order is: count the real prompts first, then switch the model.
 *Every exercise is public and stays updated as the tools change: [github.com/andrebarros6/learning-log](https://github.com/andrebarros6/learning-log)*
 
 <!--
-WORD COUNT — trimmed, one decision left.
+WORD COUNT — rechecked 2026-10-15, after "What broke" and "From the build"
+were dropped.
 
-  concept:   755 words  (brief 400-600)
-  exercise:  208 words  (brief ~150)
-  timeless:  963 words
-  + dated block ~550-650 => ~1,510-1,610 against a 1,200-1,500 budget.
+  concept:   ~760 words  (brief 400-600)
+  exercise:  ~200 words  (brief ~150)
+  news:      ~430 words  (brief ~200, 5 items)
+  total:   ~1,390 words  against a ~750-950 budget
 
-Down from ~1,750. Cut in this pass:
-  - the Claude-vs-ChatGPT paragraph, in full (weakest content, ages fastest)
-  - ~100w of redundancy from "measure it"
-  - ~65w of connective padding from the stateless and eviction/burial passages
+The concept is load-bearing as it stands: the eviction/burial distinction is
+the spine of the issue and seeds issues 5, 21 and 27; the tokenizer and
+query-it-live points are the durable skill the exercise then drills.
 
-What remains is close to the ceiling but not under it. Everything still
-here is load-bearing: the eviction/burial distinction is the spine of the
-issue and seeds issues 5, 21 and 27; the tokenizer and query-it-live points
-are the durable skill the exercise then drills.
-
-Recheck once the dated block is written and the real total is known. If it
-lands over 1,500, the honest move is to exempt issue 1 explicitly in the
-curriculum (it carries the framing preamble no other issue needs) rather
-than cut into the concept further.
+Per the curriculum, cut the news, never the concept. Trimming the news to
+three items (dropping Muse Wonder and Mistral Large 4, the least actionable)
+brings it to ~295 and the total to ~1,250. Issue 1 then stays over budget
+because of its framing preamble, which no other issue carries; exempt it
+explicitly rather than cut the concept further.
 -->

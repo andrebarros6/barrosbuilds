@@ -155,7 +155,7 @@ export default function Curriculum() {
             marginBottom: 12,
           }}
         >
-          Every issue is one concept, one exercise, and the log of what broke.
+          Every issue is one concept and one exercise you run yourself.
           The sequence runs from getting useful output out of a chat window to
           shipping an agent that runs on a schedule without you.
         </p>

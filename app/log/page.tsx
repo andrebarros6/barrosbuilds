@@ -14,11 +14,11 @@ import {
 export const metadata: Metadata = {
   title: "Learning Log — Barros Builds",
   description:
-    "Learn AI by building it. A public build log — one concept a week, a hands-on exercise, and the failure log. Free.",
+    "Learn AI by building it. A public build log — one concept a week and a hands-on exercise you run yourself. Free.",
   openGraph: {
     title: "Learning Log — learn AI by building it.",
     description:
-      "A public build log — one concept a week, a hands-on exercise you can run, and what broke. Free.",
+      "A public build log — one concept a week and a hands-on exercise you can run. Free.",
     url: "https://barrosbuilds.com/log",
     siteName: "Barros Builds",
     type: "website",
@@ -126,15 +126,14 @@ export default function NewsletterPage() {
             <p style={paragraph}>
               I&apos;m learning to build with AI in public — agents, MCP, RAG, evals,
               context management — one concept at a time. Each week I pick a tool,
-              write the theory, build an exercise, and do it myself. What works
-              ships as a public repo. What breaks gets written up honestly.
+              write the theory, build an exercise, and do it myself before it
+              reaches you. Every exercise ships as a public repo.
             </p>
 
             <p style={paragraph}>
-              You get the same thing I do: a weekly email with the concept, a
-              hands-on exercise you can run, and the failure log from my own week.
-              Plus what actually moved in AI over the past seven days, without the
-              hype.
+              You get the same thing I do: a weekly email with the concept and a
+              hands-on exercise you can run. Plus what actually moved in AI over
+              the past seven days, without the hype.
             </p>
 
             <p style={paragraph}>

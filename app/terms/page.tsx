@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "The terms for using barrosbuilds.com and receiving the Learning Log.",
 };
 
-const LAST_UPDATED = "4 October 2026";
+const LAST_UPDATED = "15 October 2026";
 
 const h2: React.CSSProperties = {
   fontFamily: "'Syne', sans-serif",
@@ -96,7 +96,7 @@ export default function TermsPage() {
           <h2 style={h2}>What you get</h2>
           <p style={p}>
             If you sign up, one email a week with a concept, an exercise, and
-            what broke. It&apos;s free. There&apos;s no account, no payment, and
+            what moved in AI that week. It&apos;s free. There&apos;s no account, no payment, and
             nothing to cancel beyond unsubscribing.
           </p>
           <p style={p}>

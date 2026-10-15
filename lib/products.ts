@@ -72,7 +72,7 @@ export const products: Product[] = [
     name: "Learning Log",
     tag: "AI · LEARNING · NEWSLETTER",
     description:
-      "A public build log for learning AI by building it — one concept a week, a hands-on exercise you can run, and the failure log.",
+      "A public build log for learning AI by building it — one concept a week and a hands-on exercise you can run.",
     status: "in_progress",
     month: "Sep 2026",
     url: "/log",

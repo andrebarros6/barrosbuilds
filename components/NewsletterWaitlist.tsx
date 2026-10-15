@@ -91,7 +91,7 @@ export default function NewsletterWaitlist() {
             maxWidth: "54ch",
           }}
         >
-          One concept a week: theory, a hands-on exercise, and my failure log.
+          One concept a week: theory and a hands-on exercise you run yourself.
         </p>
 
         {/* Own line — it's the differentiator, not a trailing clause. */}
