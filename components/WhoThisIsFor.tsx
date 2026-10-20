@@ -12,7 +12,12 @@
  * give them. What is assumed is the disposition: wanting to know whether the
  * output is right.
  *
- * Code reading is the one real floor — issues 9 and 22 turn on bugs you would
+ * The terminal is a second floor, stated rather than discovered (decided
+ * 2026-10-20 in the planning repo's curriculum): about half the exercises are
+ * scripts against the API, and issue 1 is one of them. Saying so here is what
+ * keeps "only used the chat window" honest.
+ *
+ * Code reading is the other real floor — issues 9 and 22 turn on bugs you would
  * never have thought to write a test for, and those two collapse without it.
  * "You must be a developer" would wrongly exclude people who ship real things
  * with Claude and care whether they are right.
@@ -119,6 +124,15 @@ export default function WhoThisIsFor() {
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
+                A terminal you&apos;re willing to open. About half the
+                exercises are short scripts you run against the API; the rest
+                happen inside Claude or Claude Code. Any editor works — VS
+                Code is the easiest place to start. You&apos;ll also need an
+                Anthropic API key, which is separate from a Claude
+                subscription.
+              </li>
+              <li style={listItem}>
+                <span style={marker}>→</span>
                 Ideally, something of your own to point this at: a long chat
                 you rely on, a repo you work in, a dataset you know well, a
                 task you repeat every week. Every exercise ends by applying it
@@ -151,7 +165,7 @@ export default function WhoThisIsFor() {
                 <span style={marker}>→</span>
                 Any experience building with an LLM. If you&apos;ve only ever
                 used the chat window, you&apos;re exactly who this is written
-                for.
+                for — as long as you&apos;ll open a terminal.
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
