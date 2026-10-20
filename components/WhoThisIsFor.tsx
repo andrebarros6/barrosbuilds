@@ -193,8 +193,8 @@ export default function WhoThisIsFor() {
             maxWidth: "62ch",
           }}
         >
-          If none of that sounds like you yet, the archive stays free and open —
-          come back when it does.
+          If none of that sounds like you yet, the exercises stay free and
+          open on GitHub — come back when it does.
         </p>
       </div>
     </section>
