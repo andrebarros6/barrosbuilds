@@ -71,6 +71,8 @@ Measure first. If the count is comfortable and the output is still poor, the pro
 
 **Repo:** [`learning-log-01-what-the-model-sees`](https://github.com/andrebarros6/learning-log-01-what-the-model-sees)
 
+This one is a script you run in a terminal, against the API. That's not a preference: the chat window never shows you a token count, and the API is the only place the real number exists. Not every exercise is like this — about half happen inside Claude or Claude Code — but this one can't be.
+
 Take a real conversation — a long one, from actual work, not a toy. Export it.
 
 Then:
