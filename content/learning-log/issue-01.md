@@ -31,7 +31,7 @@ The chat interface hides this well. It looks like you're talking to something wi
 
 Two consequences follow, and everything else comes from them.
 
-**The unit is the token, not the word.** Text gets split into tokens before the model sees it — roughly word-sized chunks, but not reliably. Common words are usually one token. Rare words split into several. Whitespace, punctuation and code all tokenize differently from prose. The rules of thumb people repeat — four characters per token, three-quarters of a word — are approximations that hold for English prose and fall apart precisely where you need them, which is on code, structured data, and non-English text. Those are exactly what you'll be putting in front of a model.
+**The unit is the token, not the word.** Text gets split into tokens before the model sees it — roughly word-sized chunks, but not reliably. Common words are usually one token. Rare words split into several. Whitespace, punctuation and code all tokenize differently from prose. The rules of thumb people repeat — four characters per token, three-quarters of a word — are approximations built for older tokenizers, and only ever for English prose. Tokenizers change between model generations, and the old rule now runs low on plain prose too — lower still on code, file paths and structured data, which is exactly what you'll be putting in front of a model.
 
 **The window is a budget, and it's shared.** Every model has a maximum number of tokens it can take in one request. Your system prompt, the entire conversation history, any documents you pasted, and the space reserved for the response all come out of the same allowance. That budget doesn't reset between turns. It fills as you talk.
 
@@ -80,7 +80,7 @@ Then:
 1. **Count it properly.** Token counts per message, using a real tokenizer for the model you used, not a character heuristic.
 2. **Chart the growth.** Cumulative tokens against turn number. The shape is the point: it climbs faster than you'd guess, because every turn resends everything before it.
 3. **Find the turn it broke.** You'll usually remember roughly where quality dropped. Locate it on the chart, then look at what was in the window at that moment — and what had fallen out, or was buried under forty turns of noise.
-4. **Compare heuristic to actual.** Run `len(text) / 4` alongside the real count. Note the gap, and where it's worst. If your conversation has code or JSON in it, the gap will be embarrassing.
+4. **Compare heuristic to actual.** Run `len(text) / 4` alongside the real count. Note the gap, and where it's worst. Expect it to be low everywhere, and worst on code, file paths and JSON.
 
 The starter handles export parsing and the chart; the tests run without an API key so you can check your parsing for free. The solution branch has mine.
 
