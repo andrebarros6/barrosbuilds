@@ -84,10 +84,7 @@ Then:
 
 The starter handles export parsing and the chart; the tests run without an API key so you can check your parsing for free. The solution branch has mine.
 
-<!-- BLOCKED: the sentence that belongs here is what the numbers actually
-     showed on my own conversation — the size of the gap, and which turn
-     caused the biggest jump. It cannot be written until the exercise has
-     been run. Do not ship issue 1 with this comment still in place. -->
+I ran it on a 69-turn Claude Code session with almost no code in it, and `len / 4` still came out 30% low, on nearly every turn. The biggest jump wasn't anything I pasted: one turn added 9,710 tokens of environment the tool injected on its own. Of everything the model saw, I'd typed about 2%.
 
 **Now do it on your own longest working chat** — the one you actually rely on. Nothing about this lands until you see your own number.
 
