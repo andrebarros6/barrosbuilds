@@ -48,7 +48,7 @@ Six messy order emails, each with a trap: VAT already inside the prices, a forwa
 3. **Through the API**, run the same prompt, then the same emails with a schema. Count the failures.
 4. **Read the values** of the outputs that parse. The schema can't catch the traps.
 
-> **[TO WRITE — André's finding, 2–3 sentences, from his own run of the chat step and both API modes. What the chat gave him, the parse rate in each mode, and any trap the model fell into.]**
+In the chat, all nine extractions parsed, until I realised the code-block copy icon had been stripping the fence for me. With the message's own copy button, the reply came back fenced, with a paragraph explaining the refund after it. Through the API, asking nicely parsed 0 of 18 on Opus and 3 of 18 on Haiku, every failure a code fence. With a schema it was 18 of 18, and neither model fell for a single trap I'd planted. What varied were the rules I thought I'd stated. The email never prints the socks' unit price, and I'd asked for null in that case. Opus gave null in every prompt-mode run, then worked out 19.00 in every schema run. "The order number as written" turned out to be ambiguous too: one run kept the `#`. The schema fixed the shape. The rules were still my job.
 
 **Then point it at a document type you actually process**: the invoices, bookings or statements you currently read and retype.
 
@@ -65,10 +65,19 @@ every trap was handled correctly. If André's run matches, the honest line
 is that the fence was the only failure, which is exactly the temptation to
 regex it away.
 
-WORD COUNT — 2026-11-03, before the finding.
+André's run, 2026-11-08 (Opus 5.5, 3 runs per email): chat 9/9 via the
+code-block copy icon, fenced + trailing prose via the message button;
+prompt-only 0/18 (fence only), schema 18/18/18, every trap handled.
+Tokens: prompt 10,356 in / 7,530 out; schema 25,584 in / 3,827 out.
+Haiku 5.5, same day: prompt 3/18 (15 fenced, 3 bare JSON), schema 18/18/18, every trap
+handled. Drift only on 05-trailhead: "#TH-88214" in 1 Haiku schema run;
+socks unit_price (rule: null if not stated) was null 3/3 Opus prompt,
+19.00 3/3 Opus schema; Haiku prompt 2 null/1 19.00, schema 1 null/2 19.00.
+
+WORD COUNT — 2026-11-08, with the finding.
 
   concept:   ~440 words  (brief 400-600)
-  exercise:  ~150 words  (brief ~150) + ~50 for the finding
+  exercise:  ~150 words  (brief ~150) + ~115 for the finding
   + news     ~200 words  from the week file
-  total:     ~840 words  against a ~750-950 budget
+  total:     ~905 words  against a ~750-950 budget
 -->
