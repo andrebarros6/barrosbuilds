@@ -88,53 +88,23 @@ I ran it on a 69-turn Claude Code session with almost no code in it, and `len / 
 
 **Now do it on your own longest working chat** — the one you actually rely on. Nothing about this lands until you see your own number.
 
----
 
 <!--
-DATED BLOCK — do not publish with placeholders.
+COURSE FILE — timeless. The weekly send appends that Thursday's news from
+content/learning-log/weeks/ and supplies the footer (PRD D1, D13), so neither
+lives here. The news drafted for 15 October is in git history and the
+planning repo's drafts file.
 
-Per the curriculum: this block is shared, written the week of sending, and
-must stand alone. Subscribers are at different points in the sequence, so it
-cannot assume the reader just read the concept above.
-
-The dated block is "This week in AI" only. "What broke" and "From the build"
-were dropped on 2026-10-15 (planning PRD, D11).
--->
-
-## This week in AI
-
-**[Claude Haiku 5.5](https://platform.claude.com/docs/en/models/haiku-5-5/overview).** Anthropic's small model now has a 1M-token window and starts at $0.10 / $0.50 per million input / output tokens. That rate holds for prompts up to 100,000 tokens; above that, input costs five times more. It also uses the newer tokenizer, so the same text counts as about 30% more tokens than on Haiku 4.5. Why it matters: price now depends on how much you send, so context size is a cost decision as well as a quality one. If you migrate, read the [migration guide](https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide) first: non-default sampling parameters return errors, and a reply can start with a thinking block.
-
-**Decision models.** A new category from Cloudflare ([Clef](https://infoq.com/news/2026/10/clef-decision-models)) and Microsoft ([Decision-1](https://www.testingcatalog.com/microsoft-launches-decision-1-model-in-foundry/)). You pass a fixed set of options; the model returns a probability for each, in one pass, with no text to parse. Clef comes in 27B and 9B sizes with a 64K window, and the weights are on Hugging Face. Decision-1 runs in Microsoft Foundry from $0.042 per million input tokens, with output free. Why it matters: a routing or classification step you now handle by asking a chat model for JSON could become one cheap call with a calibrated score. The benchmarks so far are the vendors' own.
-
-**[Meta Muse Wonder](https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder).** Meta's first frontier model, on its Model API at $4 / $20 per million input / output tokens. A larger Wonder Full stays inside Meta's Muse Code subscription. Meta says it scores comparably to the top models from Anthropic and OpenAI and leads on long-term memory, but those are Meta's own tests. Why it matters: one more provider at the top tier, which only helps if your code isn't tied to one vendor's API.
-
-**[Mistral Large 4](https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5).** Public preview in Mistral Studio, multimodal, with a 1M-token window. Mistral says downloadable weights follow by the end of October; the licence isn't confirmed yet. Why it matters: if the weights ship under a permissive licence, it's a large model you can run on your own infrastructure, which matters for data that can't leave the EU.
-
-**Google: Nano Banana 2.1 and EmbeddingGemma 2.** [Nano Banana 2.1](https://yourstory.com/ai-story/nano-banana-21-google-ai-image-generation-cheaper), Google's image model, roughly halves the price per image (1K images go from $0.067 to $0.034) and lets you edit over several turns instead of regenerating. [EmbeddingGemma 2](https://www.eesel.ai/blog/embeddinggemma-2) is open (Apache 2.0, 740M parameters) and puts text, code, images, audio and video in one embedding space. Why it matters: image generation is now cheap enough for per-user features, and search across mixed media can run on a laptop or phone without an API.
-
----
-
-*You're getting this because you joined the Learning Log waitlist. One issue a week, free, unsubscribe whenever.*
-
-*Every exercise is public and stays updated as the tools change: [github.com/andrebarros6/learning-log](https://github.com/andrebarros6/learning-log)*
-
-<!--
-WORD COUNT — rechecked 2026-10-15, after "What broke" and "From the build"
-were dropped.
+WORD COUNT — rechecked 2026-10-25.
 
   concept:   ~760 words  (brief 400-600)
   exercise:  ~200 words  (brief ~150)
-  news:      ~430 words  (brief ~200, 5 items)
-  total:   ~1,390 words  against a ~750-950 budget
+  + news     ~200 words  from the week file
+  total:   ~1,160 words  against a ~750-950 budget
 
 The concept is load-bearing as it stands: the eviction/burial distinction is
 the spine of the issue and seeds issues 5, 21 and 27; the tokenizer and
-query-it-live points are the durable skill the exercise then drills.
-
-Per the curriculum, cut the news, never the concept. Trimming the news to
-three items (dropping Muse Wonder and Mistral Large 4, the least actionable)
-brings it to ~295 and the total to ~1,250. Issue 1 then stays over budget
-because of its framing preamble, which no other issue carries; exempt it
-explicitly rather than cut the concept further.
+query-it-live points are the durable skill the exercise then drills. Issue 1
+stays over budget because of its framing preamble, which no other issue
+carries; exempt it explicitly rather than cut the concept further.
 -->
