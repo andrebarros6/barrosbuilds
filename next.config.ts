@@ -18,6 +18,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // The weekly send reads the issue and week files from disk at run time, so
+  // they must ship inside that function's bundle.
+  outputFileTracingIncludes: {
+    "/api/cron/send-weekly": ["./content/learning-log/**/*"],
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

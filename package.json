@@ -7,12 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test scripts/learning-log/render.test.mjs",
-    "issue": "node --env-file=.env.local scripts/learning-log/send-issue.mjs"
+    "test": "node --test lib/learning-log/render.test.mjs lib/learning-log/drip.test.mjs lib/learning-log/run-week.test.mjs",
+    "weekly": "node --env-file=.env.local scripts/learning-log/weekly.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.3",
     "@vercel/analytics": "^2.0.1",
+    "marked": "^18.1.1",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
@@ -24,7 +25,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "marked": "^18.1.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
