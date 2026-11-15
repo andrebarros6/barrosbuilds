@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { firstIssueMonth } from "@/lib/newsletter";
+import { START_LINE } from "@/lib/newsletter";
 
 type Status = "idle" | "submitting" | "done" | "error";
 
@@ -77,7 +77,7 @@ export default function WaitlistForm({ source }: { source: string }) {
             flexShrink: 0,
           }}
         />
-        {message} First issue ships {firstIssueMonth()}.
+        {message} {START_LINE}
       </div>
     );
   }
@@ -160,7 +160,7 @@ export default function WaitlistForm({ source }: { source: string }) {
             whiteSpace: "nowrap",
           }}
         >
-          {status === "submitting" ? "Joining…" : "Join the waitlist →"}
+          {status === "submitting" ? "Joining…" : "Start at issue 1 →"}
         </button>
       </form>
 

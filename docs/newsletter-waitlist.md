@@ -124,15 +124,16 @@ Then delete the test rows.
 
 ## Naming
 
-The product is **Learning Log**; the first issue ships **October**. Both live
-in [lib/newsletter.ts](../lib/newsletter.ts). In user-facing copy it is never
+The product is **Learning Log**. The name and the start line ("Issue 1 arrives
+the Thursday after you sign up") live in [lib/newsletter.ts](../lib/newsletter.ts). In user-facing copy it is never
 called a "newsletter" — the descriptor is "a public build log".
 
 ## Not built yet (deliberately)
 
-Subscriber position tracking, weekly cron, archive subdomain, progress
-tracking, comments, accounts. The welcome email and unsubscribe *are* built —
-see [welcome-email.md](welcome-email.md).
+Archive subdomain, progress tracking, comments, accounts. The welcome email,
+unsubscribe and the weekly send *are* built — see
+[welcome-email.md](welcome-email.md) and
+[learning-log-weekly.md](learning-log-weekly.md).
 
 ### GDPR note
 

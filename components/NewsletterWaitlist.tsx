@@ -3,7 +3,7 @@ import WaitlistForm from "@/components/WaitlistForm";
 import {
   NEWSLETTER_HEADLINE,
   NEWSLETTER_NAME,
-  firstIssueMonth,
+  START_LINE,
 } from "@/lib/newsletter";
 
 /**
@@ -121,7 +121,7 @@ export default function NewsletterWaitlist() {
           }}
         >
           <span style={{ color: "var(--muted)" }}>
-            Free. Weekly. First issue ships {firstIssueMonth()}.
+            Free. Every Thursday. {START_LINE}
           </span>
           <Link
             href="/log"

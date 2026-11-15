@@ -9,11 +9,11 @@
  */
 export const NEWSLETTER_NAME = "Learning Log";
 export const NEWSLETTER_DESCRIPTOR = "a public build log";
-export const FIRST_ISSUE_MONTH: string | null = "October";
-export const MONTH_PLACEHOLDER = "[MONTH]";
 
 export const NEWSLETTER_HEADLINE = "Learn AI by building it. Every week.";
 
-export function firstIssueMonth(): string {
-  return FIRST_ISSUE_MONTH ?? MONTH_PLACEHOLDER;
-}
+/**
+ * When a new subscriber starts (planning PRD D12): everyone gets issue 1 on
+ * the Thursday after they sign up, then one issue a week.
+ */
+export const START_LINE = "Issue 1 arrives the Thursday after you sign up.";

@@ -8,7 +8,7 @@ import WhoThisIsFor from "@/components/WhoThisIsFor";
 import {
   NEWSLETTER_HEADLINE,
   NEWSLETTER_NAME,
-  firstIssueMonth,
+  START_LINE,
 } from "@/lib/newsletter";
 
 export const metadata: Metadata = {
@@ -181,7 +181,7 @@ export default function NewsletterPage() {
               paddingBottom: 72,
             }}
           >
-            First issue ships {firstIssueMonth()}. No spam, no upsell.
+            {START_LINE} No spam, no upsell.
           </div>
         </div>
       </section>
