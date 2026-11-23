@@ -126,8 +126,9 @@ export default function NewsletterPage() {
             <p style={paragraph}>
               I&apos;m learning to build with AI in public — agents, MCP, RAG, evals,
               context management — one concept at a time. Each week I pick a tool,
-              write the theory, build an exercise, and do it myself before it
-              reaches you. Every exercise ships as a public repo.
+              write the theory, build an exercise, and run it before it reaches
+              you. Every exercise ships as a public repo, and its solution says
+              how it was run.
             </p>
 
             <p style={paragraph}>
