@@ -12,13 +12,13 @@ import {
 } from "@/lib/newsletter";
 
 export const metadata: Metadata = {
-  title: "Learning Log — Barros Builds",
+  title: "Learning Log · Barros Builds",
   description:
-    "Learn AI by building it. A public build log — one concept a week and a hands-on exercise you run yourself. Free.",
+    "Learn AI by building it. A public build log: one concept a week and a hands-on exercise you run yourself. Free.",
   openGraph: {
-    title: "Learning Log — learn AI by building it.",
+    title: "Learning Log: learn AI by building it.",
     description:
-      "A public build log — one concept a week and a hands-on exercise you can run. Free.",
+      "A public build log: one concept a week and a hands-on exercise you can run. Free.",
     url: "https://barrosbuilds.com/log",
     siteName: "Barros Builds",
     type: "website",
@@ -124,8 +124,8 @@ export default function NewsletterPage() {
               has already clicked through and wants the whole case. */}
           <div style={{ maxWidth: "62ch" }}>
             <p style={paragraph}>
-              I&apos;m learning to build with AI in public — agents, MCP, RAG, evals,
-              context management — one concept at a time. Each week I pick a tool,
+              I&apos;m learning to build with AI in public (agents, MCP, RAG, evals,
+              context management), one concept at a time. Each week I pick a tool,
               write the theory, build an exercise, and run it before it reaches
               you. Every exercise ships as a public repo, and its solution says
               how it was run.
@@ -140,7 +140,7 @@ export default function NewsletterPage() {
             <p style={paragraph}>
               The exercises are yours to keep. They live on GitHub, they stay
               updated as the tools change, and they&apos;re designed to be applied
-              to your own projects — not just followed.
+              to your own projects, not just followed.
             </p>
 
             {/* Load-bearing. Do not soften, shorten, or move. */}

@@ -94,7 +94,7 @@ const TRACKS: Track[] = [
   {
     n: 6,
     name: "Agents that run without you",
-    blurb: "Scheduled, persistent, and bounded — the ones you are not watching.",
+    blurb: "Scheduled, persistent, and bounded: the ones you are not watching.",
     issues: [
       { n: 27, title: "Retrieval quality and its limits" },
       { n: 28, title: "Memory that outlives the session" },
@@ -169,7 +169,7 @@ export default function Curriculum() {
             marginBottom: 48,
           }}
         >
-          You start at issue 1 whenever you join — the sequence does not assume
+          You start at issue 1 whenever you join. The sequence does not assume
           you read last week&apos;s.
         </p>
 

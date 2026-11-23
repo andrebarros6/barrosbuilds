@@ -107,7 +107,7 @@ export default function WhoThisIsFor() {
             <ul style={{ listStyle: "none" }}>
               <li style={listItem}>
                 <span style={marker}>→</span>
-                You&apos;ve used a chat model — Claude, ChatGPT, something. I
+                You&apos;ve used a chat model: Claude, ChatGPT, something. I
                 won&apos;t be explaining what a prompt is.
               </li>
               <li style={listItem}>
@@ -119,14 +119,14 @@ export default function WhoThisIsFor() {
               <li style={listItem}>
                 <span style={marker}>→</span>
                 You can read code when you need to. You won&apos;t write much
-                of it — increasingly that&apos;s the whole point — but some
+                of it (increasingly that&apos;s the whole point), but some
                 bugs are ones you&apos;d never have thought to test for.
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
                 A terminal you&apos;re willing to open. About half the
                 exercises are short scripts you run against the API; the rest
-                happen inside Claude or Claude Code. Any editor works — VS
+                happen inside Claude or Claude Code. Any editor works. VS
                 Code is the easiest place to start. You&apos;ll also need an
                 Anthropic API key, which is separate from a Claude
                 subscription.
@@ -158,14 +158,14 @@ export default function WhoThisIsFor() {
               <li style={listItem}>
                 <span style={marker}>→</span>
                 To already know how to check the output. Tests, evals,
-                comparisons against something you trust — setting those up is
+                comparisons against something you trust. Setting those up is
                 most of what this teaches.
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
                 Any experience building with an LLM. If you&apos;ve only ever
                 used the chat window, you&apos;re exactly who this is written
-                for — as long as you&apos;ll open a terminal.
+                for, as long as you&apos;ll open a terminal.
               </li>
               <li style={listItem}>
                 <span style={marker}>→</span>
@@ -194,7 +194,7 @@ export default function WhoThisIsFor() {
           }}
         >
           If none of that sounds like you yet, the exercises stay free and
-          open on GitHub — come back when it does.
+          open on GitHub. Come back when it does.
         </p>
       </div>
     </section>

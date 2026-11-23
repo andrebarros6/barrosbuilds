@@ -103,7 +103,7 @@ export default function NewsletterWaitlist() {
             marginBottom: 28,
           }}
         >
-          I&apos;m not an expert — that&apos;s the point.
+          I&apos;m not an expert. That&apos;s the point.
         </p>
 
         <WaitlistForm source="homepage" />

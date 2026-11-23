@@ -47,13 +47,13 @@ function page(message: string) {
     `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unsubscribed — Barros Builds</title></head>
+<title>Unsubscribed · Barros Builds</title></head>
 <body style="margin:0;background:#1c1a17;color:#e8dcc8;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;">
   <div style="max-width:520px;margin:0 auto;padding:96px 24px;">
     <div style="font-family:'Courier New',monospace;font-size:11px;letter-spacing:0.14em;color:#c4593a;margin-bottom:20px;">LEARNING LOG</div>
     <h1 style="font-size:26px;margin:0 0 16px;">${message}</h1>
     <p style="color:#a89880;line-height:1.7;margin:0 0 28px;">
-      You won't get any more emails from the Learning Log. No hard feelings — the
+      You won't get any more emails from the Learning Log. No hard feelings. The
       exercises stay public on GitHub either way.
     </p>
     <a href="https://barrosbuilds.com" style="font-family:'Courier New',monospace;font-size:12px;color:#a89880;border-bottom:1px solid #4f4840;text-decoration:none;">← barrosbuilds.com</a>
