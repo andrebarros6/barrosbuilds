@@ -4,7 +4,7 @@ of: 30
 track: Working with the models
 title: What the model actually sees
 repo: learning-log-01-what-the-model-sees
-status: draft
+status: ready
 ---
 
 `Issue 1 of 30 · Working with the models`

@@ -4,7 +4,7 @@ of: 30
 track: Working with the models
 title: Prompting as engineering
 repo: learning-log-02-prompting-as-engineering
-status: draft
+status: ready
 ---
 
 `Issue 2 of 30 · Working with the models`

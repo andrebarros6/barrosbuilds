@@ -4,7 +4,7 @@ of: 30
 track: Working with the models
 title: Structured outputs
 repo: learning-log-03-structured-outputs
-status: draft
+status: ready
 ---
 
 `Issue 3 of 30 · Working with the models`
