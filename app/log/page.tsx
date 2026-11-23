@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     siteName: "Barros Builds",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Learning Log: learn AI by building it.",
+    description:
+      "A public build log: one concept a week and a hands-on exercise you can run. Free.",
+  },
 };
 
 const paragraph: React.CSSProperties = {
