@@ -164,7 +164,7 @@ export default function FeaturedProducts() {
                           ? "0 0 6px rgba(196,89,58,0.6)"
                           : "none",
                     }} />
-                    {product.status === "live" ? "Open project →" : "In progress — read more →"}
+                    {product.status === "live" ? "Open project →" : "In progress · read more →"}
                   </>
                 ) : "In progress →"}
               </div>

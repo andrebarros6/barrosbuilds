@@ -3,10 +3,10 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Barros Builds — Data & AI Products",
+  title: "Barros Builds · Data & AI Products",
   description: "Data analyst turned product builder. Shipping AI-powered products in 2026.",
   openGraph: {
-    title: "Barros Builds — Data & AI Products",
+    title: "Barros Builds · Data & AI Products",
     description: "Data analyst turned product builder. Shipping AI-powered products in 2026.",
     url: "https://barrosbuilds.com",
     siteName: "Barros Builds",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Barros Builds — Data & AI Products",
+    title: "Barros Builds · Data & AI Products",
     description: "Data analyst turned product builder. Shipping AI-powered products in 2026.",
   },
 };

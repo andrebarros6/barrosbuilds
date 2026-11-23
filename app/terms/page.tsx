@@ -4,7 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms — Barros Builds",
+  title: "Terms · Barros Builds",
   description:
     "The terms for using barrosbuilds.com and receiving the Learning Log.",
 };
@@ -74,7 +74,7 @@ export default function TermsPage() {
 
           <p style={{ ...p, color: "var(--text)" }}>
             Short version: the Learning Log is free, you can leave whenever you
-            like, and everything in it is one person learning in public — use
+            like, and everything in it is one person learning in public. Use
             it at your own judgement.
           </p>
 
@@ -86,7 +86,7 @@ export default function TermsPage() {
           </p>
           <p style={p}>
             The site and the Learning Log are run by André Barros, an individual
-            based in Portugal — reachable at{" "}
+            based in Portugal, reachable at{" "}
             <a href="mailto:andre@barrosbuilds.com" style={{ color: "var(--sand)" }}>
               andre@barrosbuilds.com
             </a>
@@ -137,7 +137,7 @@ export default function TermsPage() {
             The text on this site and in the emails is mine. Quote it and link
             to it freely; please don&apos;t republish whole issues as your own.
             Exercise code lives in public GitHub repositories, and each
-            repository states its own licence — that licence, not this page,
+            repository states its own licence. That licence, not this page,
             governs the code.
           </p>
 

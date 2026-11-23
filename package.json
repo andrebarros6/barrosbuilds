@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test lib/learning-log/render.test.mjs lib/learning-log/drip.test.mjs lib/learning-log/run-week.test.mjs lib/learning-log/welcome.test.mjs",
+    "test": "node --test lib/learning-log/render.test.mjs lib/learning-log/drip.test.mjs lib/learning-log/run-week.test.mjs lib/learning-log/welcome.test.mjs lib/site-copy.test.mjs",
     "weekly": "node --env-file=.env.local scripts/learning-log/weekly.mjs"
   },
   "dependencies": {

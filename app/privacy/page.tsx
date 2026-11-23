@@ -4,7 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy — Barros Builds",
+  title: "Privacy · Barros Builds",
   description:
     "What data Barros Builds collects, why, where it's stored, and how to get it deleted.",
 };
@@ -81,7 +81,7 @@ export default function PrivacyPage() {
 
           <h2 style={h2}>Who&apos;s responsible</h2>
           <p style={p}>
-            André Barros, Portugal — reachable at{" "}
+            André Barros, Portugal, reachable at{" "}
             <a href="mailto:andre@barrosbuilds.com" style={{ color: "var(--sand)" }}>
               andre@barrosbuilds.com
             </a>
@@ -92,11 +92,11 @@ export default function PrivacyPage() {
           <h2 style={h2}>What I collect</h2>
           <p style={p}>
             Your email address, and which page you signed up from. That&apos;s
-            it — no name, no company, no profiling.
+            it: no name, no company, no profiling.
           </p>
           <p style={p}>
             The site uses Vercel Analytics to count page views. It doesn&apos;t
-            use cookies and doesn&apos;t follow you across other sites — it
+            use cookies and doesn&apos;t follow you across other sites. It
             tells me which pages get read, not who read them. Vercel also keeps
             short-lived server logs as part of serving any website. I
             don&apos;t store IP addresses myself.
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
 
           <h2 style={h2}>Why</h2>
           <p style={p}>
-            To send you the Learning Log — one email a week with a concept, an
+            To send you the Learning Log: one email a week with a concept, an
             exercise, and what moved in AI that week. The legal basis is your consent, given when
             you submitted the form.
           </p>
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
           <p style={p}>
             In a Supabase database hosted in the EU (Frankfurt). Emails are
             delivered through Resend. Both are processors acting on my
-            instructions — they don&apos;t get to use your address for anything
+            instructions. They don&apos;t get to use your address for anything
             of their own.
           </p>
 
@@ -127,7 +127,7 @@ export default function PrivacyPage() {
           <h2 style={h2}>Your rights</h2>
           <p style={p}>
             You can ask me for a copy of what I hold on you, ask me to correct
-            it, or ask me to delete it — all of it, permanently. Email{" "}
+            it, or ask me to delete it: all of it, permanently. Email{" "}
             <a href="mailto:andre@barrosbuilds.com" style={{ color: "var(--sand)" }}>
               andre@barrosbuilds.com
             </a>{" "}

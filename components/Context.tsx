@@ -32,7 +32,7 @@ export default function Context() {
             fontWeight: 400,
           }}
         >
-          8 years on a manufacturing floor at TE Connectivity. First to bring Power BI to the lines — 70% faster changeovers, 40% more output, 80% fewer defects. The data existed. I built the lens to read it differently.
+          8 years on a manufacturing floor at TE Connectivity. First to bring Power BI to the lines: 70% faster changeovers, 40% more output, 80% fewer defects. The data existed. I built the lens to read it differently.
         </p>
 
         <p

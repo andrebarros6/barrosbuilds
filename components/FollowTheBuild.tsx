@@ -50,7 +50,7 @@ export default function FollowTheBuild() {
               fontWeight: 400,
             }}
           >
-            Every product — what shipped, what broke, the real numbers. Building in public on LinkedIn, every step.
+            Every product: what shipped, what broke, the real numbers. Building in public on LinkedIn, every step.
           </p>
 
           <a

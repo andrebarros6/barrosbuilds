@@ -17,7 +17,7 @@ export const products: Product[] = [
     name: "Painel dos Recibos",
     tag: "DATA · FINTECH · PORTUGAL",
     description:
-      "Dashboard for Portuguese independent workers to track income by month and client, and understand IRS retention — no spreadsheet needed.",
+      "Dashboard for Portuguese independent workers to track income by month and client, and understand IRS retention. No spreadsheet needed.",
     status: "live",
     month: "Feb 2026",
     url: "https://paineldosrecibos.barrosbuilds.com/",
@@ -50,7 +50,7 @@ export const products: Product[] = [
     name: "Petit Coeur",
     tag: "FAMILY · BABY · MEMORIES",
     description:
-      "A private photo album where families capture every moment of their baby growing up — together.",
+      "A private photo album where families capture every moment of their baby growing up, together.",
     status: "live",
     month: "May 2026",
     url: "https://petitcoeur.barrosbuilds.com/",
@@ -61,7 +61,7 @@ export const products: Product[] = [
     name: "Bitcoin PT",
     tag: "BITCOIN · INFLATION · PORTUGAL",
     description:
-      "Compares Bitcoin's return against Portuguese inflation year by year, so you can see whether it actually protected your purchasing power — not just whether the price went up.",
+      "Compares Bitcoin's return against Portuguese inflation year by year, so you can see whether it actually protected your purchasing power, not just whether the price went up.",
     status: "live",
     month: "Aug 2026",
     url: "https://bitcoinpt.barrosbuilds.com",
@@ -72,7 +72,7 @@ export const products: Product[] = [
     name: "Learning Log",
     tag: "AI · LEARNING · NEWSLETTER",
     description:
-      "A public build log for learning AI by building it — one concept a week and a hands-on exercise you can run.",
+      "A public build log for learning AI by building it: one concept a week and a hands-on exercise you can run.",
     status: "in_progress",
     month: "Sep 2026",
     url: "/log",

@@ -71,7 +71,7 @@ export default function Hero() {
             fontWeight: 400,
           }}
         >
-          Data analyst turned product builder. Shipping 10 AI-powered products in 2026 — building in public every step of the way.
+          Data analyst turned product builder. Shipping 10 AI-powered products in 2026, building in public every step of the way.
         </p>
 
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
