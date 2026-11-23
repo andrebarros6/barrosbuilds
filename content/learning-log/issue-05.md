@@ -52,7 +52,7 @@ A small coffee roaster has three emails to answer, and a shared drive of about 1
 3. **Answer them again** with only your selection.
 4. **Compare** the size, the answers, and anything the whole-drive replies said that yours couldn't.
 
-My selections were 97% smaller. On Sonnet and Opus, both versions got every answer right. The whole drive only hurt Haiku, which stalled between old and new terms instead of choosing. Moving the question to the end changed nothing. What I didn't expect: in 8 of 12 whole-drive replies, the stronger models warned that nothing showed the customers had ever been sent the new terms. My cut had dropped the email archive as irrelevant. It was the one file that knew.
+My selections were 97% smaller, and on Sonnet and Opus both versions got every answer right. Haiku is a different story, and so is what the whole-drive replies said that my selections couldn't. Both are in SOLUTION.md on the repo's solution branch. Do the exercise first.
 
 **Then find the largest prompt in your own work**, the one where you paste a whole document because choosing is harder, and cut it by half without losing quality.
 
@@ -77,9 +77,12 @@ exact prefix match, invalidated from the first changed byte onward.
 WORD COUNT — 2026-11-23.
 
   concept:   ~415 words  (brief 400-600)
-  exercise:  ~230 words  (brief ~150, plus the finding)
+  exercise:  ~190 words  (brief ~150, plus a short finding)
   + news     ~200 words  from the week file
-  total:     ~845 words  against a ~750-950 budget
+  total:     ~805 words  against a ~750-950 budget
+
+The finding is cut to what doesn't spoil the exercise (2026-11-23). Haiku's
+results and the dropped email archive live only in SOLUTION.md.
 
 Status stays draft until André reads it and flips it.
 -->
