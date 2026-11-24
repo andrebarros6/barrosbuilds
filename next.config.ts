@@ -17,11 +17,24 @@ const securityHeaders = [
   },
 ];
 
+/**
+ * AI Wrapped lives in its own repo and Vercel project (github.com/andrebarros6/ai-wrapped) and is
+ * served here at /wrapped. It's a static site built with basePath "/wrapped", so paths pass through
+ * unchanged. Its own security headers (including a strict CSP) come back with each response.
+ */
+const WRAPPED_ORIGIN = "https://ai-wrapped-tau.vercel.app";
+
 const nextConfig: NextConfig = {
   // The weekly send reads the issue and week files from disk at run time, so
   // they must ship inside that function's bundle.
   outputFileTracingIncludes: {
     "/api/cron/send-weekly": ["./content/learning-log/**/*"],
+  },
+  async rewrites() {
+    return [
+      { source: "/wrapped", destination: `${WRAPPED_ORIGIN}/wrapped` },
+      { source: "/wrapped/:path*", destination: `${WRAPPED_ORIGIN}/wrapped/:path*` },
+    ];
   },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
