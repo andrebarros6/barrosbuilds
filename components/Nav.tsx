@@ -52,6 +52,9 @@ export default function Nav() {
           <li>
             <Link href="/log" style={{ color: "var(--muted)" }}>learn ai</Link>
           </li>
+          <li>
+            <Link href="/es" style={{ color: "var(--muted)" }} lang="es">español</Link>
+          </li>
         </ul>
 
         <a
