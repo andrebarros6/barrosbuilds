@@ -80,6 +80,17 @@ export const products: Product[] = [
   },
   {
     id: 7,
+    name: "EMCA Configurator",
+    tag: "ENGINEERING · B2B · CONFIGURATOR",
+    description:
+      "A step-by-step wizard that picks the right backshell, caps, gaskets and dummy receptacles for a connector and exports the bill of materials. No catalogue codes to look up.",
+    status: "live",
+    month: "Oct 2026",
+    url: "https://emca-configurator.barrosbuilds.com/#/visual",
+    featured: true,
+  },
+  {
+    id: 8,
     name: "AI Wrapped",
     tag: "AI · DATA · PRIVACY",
     description:
@@ -88,14 +99,6 @@ export const products: Product[] = [
     month: "Nov 2026",
     url: "/wrapped",
     featured: true,
-  },
-  {
-    id: 8,
-    name: "Coming Soon",
-    tag: "TBD",
-    description: "Chosen based on success patterns.",
-    status: "planned",
-    month: "Q4 2026",
   },
   {
     id: 9,
