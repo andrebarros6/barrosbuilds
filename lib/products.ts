@@ -70,21 +70,24 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Learning Log",
-    tag: "AI · LEARNING · NEWSLETTER",
+    tag: "AI · LEARNING · BUILD LOG",
     description:
       "A public build log for learning AI by building it: one concept a week and a hands-on exercise you can run.",
-    status: "in_progress",
+    status: "live",
     month: "Sep 2026",
     url: "/log",
     featured: true,
   },
   {
     id: 7,
-    name: "Coming Soon",
-    tag: "TBD",
-    description: "Chosen based on market feedback.",
-    status: "planned",
-    month: "Q3 2026",
+    name: "AI Wrapped",
+    tag: "AI · DATA · PRIVACY",
+    description:
+      "Your year with Claude as eight shareable story cards. Your export is analysed in your own browser, so nothing gets uploaded.",
+    status: "in_progress",
+    month: "Nov 2026",
+    url: "/wrapped",
+    featured: true,
   },
   {
     id: 8,
