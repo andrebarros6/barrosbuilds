@@ -146,6 +146,8 @@ export default function FeaturedProducts() {
                   display: "flex",
                   alignItems: "center",
                   gap: 6,
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
                 {product.url ? (
@@ -183,6 +185,7 @@ export default function FeaturedProducts() {
                   letterSpacing: "-0.05em",
                   pointerEvents: "none",
                   userSelect: "none",
+                  zIndex: 0,
                 }}
               >
                 {product.month.split(" ")[0].toUpperCase()}
