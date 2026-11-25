@@ -80,11 +80,14 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    name: "Coming Soon",
-    tag: "TBD",
-    description: "Chosen based on market feedback.",
-    status: "planned",
-    month: "Q3 2026",
+    name: "AI Wrapped",
+    tag: "AI · DATA · PRIVACY",
+    description:
+      "Your year with Claude as eight shareable story cards. Your export is analysed in your own browser, so nothing gets uploaded.",
+    status: "in_progress",
+    month: "Nov 2026",
+    url: "/wrapped",
+    featured: true,
   },
   {
     id: 8,
