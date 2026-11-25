@@ -70,10 +70,10 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Learning Log",
-    tag: "AI · LEARNING · NEWSLETTER",
+    tag: "AI · LEARNING · BUILD LOG",
     description:
       "A public build log for learning AI by building it: one concept a week and a hands-on exercise you can run.",
-    status: "in_progress",
+    status: "live",
     month: "Sep 2026",
     url: "/log",
     featured: true,
